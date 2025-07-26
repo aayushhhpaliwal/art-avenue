@@ -1,0 +1,242 @@
+{% schema %}
+{
+  "name": "MyCollections",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "first_image",
+      "label": "first Image"
+    },
+    {
+      "type": "url",
+      "id": "first1_link",
+      "label": "first1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "second_image",
+      "label": "second Image"
+    },
+    {
+      "type": "url",
+      "id": "second1_link",
+      "label": "second1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "thrid_image",
+      "label": "thrid Image"
+    },
+    {
+      "type": "url",
+      "id": "thrid1_link",
+      "label": "thrid1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "four_image",
+      "label": "four Image"
+    },
+    {
+      "type": "url",
+      "id": "four1_link",
+      "label": "four1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "five_image",
+      "label": "five Image"
+    },
+    {
+      "type": "url",
+      "id": "five1_link",
+      "label": "five Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "six_image",
+      "label": "six Image"
+    },
+    {
+      "type": "url",
+      "id": "six1_link",
+      "label": "six1 Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "MyCollections"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="jewelry-section page-width">
+  <div class="grid-container">
+    <!-- First column with 2 images -->
+    <div class="column column-split">
+      <div class="jewelry-item">
+        <a href="{{ section.settings.first1_link }}">
+          <img src="{{ section.settings.first_image | img_url: '1000x' }}" alt="Bracelets">
+          <span></span>
+        </a>
+      </div>
+      <div class="jewelry-item">
+        <a href="{{ section.settings.second1_link }}">
+          <img src="{{ section.settings.second_image | img_url: '1000x' }}" alt="Necklaces">
+          <span></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Second column with 1 image -->
+    <div class="column column-full">
+      <div class="jewelry-item full-height">
+        <a href="{{ section.settings.thrid1_link }}">
+          <img src="{{ section.settings.thrid_image | img_url: '1500x' }}" alt="Earrings" class="ap-sec-img">
+          <span></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Third column with 2 images -->
+    <div class="column column-split">
+      <div class="jewelry-item">
+        <a href="{{ section.settings.four1_link }}">
+          <img src="{{ section.settings.four_image | img_url: '1000x' }}" alt="Diamonds">
+          <span></span>
+        </a>
+      </div>
+      <div class="jewelry-item">
+        <a href="{{ section.settings.five1_link }}">
+          <img src="{{ section.settings.five_image | img_url: '1000x' }}" alt="Pearls">
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.jewelry-section {
+    margin-top: 20px;
+    max-width:100%;
+}
+
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  max-width:100%;
+}
+
+  .column {
+    height: 100%; /* Make columns fill the grid container height */
+  }
+
+  .column-split {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .column-split .jewelry-item {
+    flex: 1; /* Make all side images equal height */
+  }
+ 
+  .column-full {
+    height: 100%;
+  }
+
+  .full-height {
+    height: 100%; /* Make middle image fill full height */
+  }
+
+  .jewelry-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .jewelry-item img {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .jewelry-item full-height img{
+    height:100% !important;
+  }
+
+  .jewelry-item:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .jewelry-item span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  }
+.ap-sec-img{
+  /* height:430px !important; */
+  height:100% !important;
+}
+  @media (max-width: 768px) {
+    .jewelry-section {
+      height: auto; /* Allow natural height on mobile */
+      /* min-height: 80vh; /* Minimum height on mobile */ */
+    }
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .column-split {
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    .column-full .jewelry-item {
+      aspect-ratio: 16/9; /* Maintain reasonable aspect ratio on mobile */
+    }
+
+    .jewelry-item {
+      flex: 1;
+    }
+   .jewelry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+    .grid-container {
+    display: block;
+}
+    .column-split {
+        flex-direction: row;
+        gap: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .column-split {
+      flex-direction: row;
+    }
+
+    .jewelry-item {
+      aspect-ratio: 1/1; /* Square aspect ratio for mobile */
+    }
+  }
+</style>

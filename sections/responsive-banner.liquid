@@ -1,0 +1,58 @@
+{% schema %}
+{
+  "name": "Responsive Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_text",
+      "label": "Banner Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Responsive banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="responsive-banner">
+  <div class="desktop-image">
+    {{ settings.desktop_image | image_url: '2048x' | img_tag: 'Desktop Banner', width: 2048, height: 1024 }}
+  </div>
+  <div class="mobile-image">
+    {{ settings.mobile_image | image_url: '1024x' | img_tag: 'Mobile Banner', width: 1024, height: 512 }}
+  </div>
+  <div class="banner-text">{{ settings.banner_text }}</div>
+</div>
+
+<style>
+  .responsive-banner {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adaptive height */
+  }
+  .responsive-banner img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  @media (max-width: 768px) {
+    .responsive-banner img.desktop {
+      display: none; /* Hide desktop image on mobile */
+    }
+    .responsive-banner img.mobile {
+      display: block; /* Show mobile image */
+    }
+  }
+</style>

@@ -1,0 +1,128 @@
+<style>
+ .icon-new {
+    position: absolute;
+    top: 40px;
+    left: 105px;
+    pointer-events: none;
+    animation: slide 6s linear infinite;
+    overflow: hidden;
+    width: 200px;
+    margin: 0;
+}
+  /* .field input:not(:placeholder-shown)+.icon-new{
+    display:none;
+  } */
+  .field input:not(:placeholder-shown) + label .icon-new {
+    display: none;
+}
+  .icon-new div {
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* color: red; */
+    
+}
+  .field {
+  position: relative;
+  overflow: hidden;  /* Add this */
+}
+  @keyframes slide {
+    0% {
+        transform: translateY(0px);
+    }
+
+    5% {
+        transform: translateY(-60px);
+    }
+
+    30% {
+        transform: translateY(-60px);
+    }
+
+    35% {
+        transform: translateY(-120px);
+    }
+
+    65% {
+        transform: translateY(-120px);
+    }
+
+    70% {
+        transform: translateY(-180px);
+    }
+
+    100% {
+        transform: translateY(-180px);
+    }
+}
+</style>         
+<predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+          <search-form class="search-modal__form">
+
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+          <div class="field">
+            <input
+              class="search__input field__input"
+              id="{{ input_id }}"
+              type="search"
+              name="q"
+              value="{{ search.terms | escape }}"
+              placeholder="Hello"
+              {%- if settings.predictive_search_enabled -%}
+                role="combobox"
+                aria-expanded="false"
+                aria-owns="predictive-search-results"
+                aria-controls="predictive-search-results"
+                aria-haspopup="listbox"
+                aria-autocomplete="list"
+                autocorrect="off"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+              {%- endif -%}
+            >
+            <label class="field__label" for="{{ input_id }}" style="display: flex; align-items: center;">
+  <span style="display: inline-flex; width: 16px; height: 16px; margin-right: 8px;">
+    {{- 'icon-search.svg' | inline_asset_content -}}
+  </span>
+  <span>{{ 'general.search.search' | t }} For</span>
+<div class="icon-new">
+<div>Bedsheets</div>  
+<div>Cushion Covers</div>  
+<div>Dining Sets</div>  
+</div>
+</label>
+
+            <input type="hidden" name="options[prefix]" value="last">
+            <button
+              type="reset"
+              class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+              aria-label="{{ 'general.search.reset' | t }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-reset.svg' | inline_asset_content -}}
+              </span>
+            </button>
+            <!-- <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+              <span class="svg-wrapper">
+                {{- 'icon-search.svg' | inline_asset_content -}}
+              </span>
+            </button> -->
+          </div>
+
+          {%- if settings.predictive_search_enabled -%}
+            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+              {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+            </div>
+
+            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+          {%- endif -%}
+        </form>
+        {%- if settings.predictive_search_enabled -%}
+          </predictive-search>
+        {%- else -%}
+          </search-form>
+        {%- endif -%}
+   
+

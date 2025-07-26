@@ -1,0 +1,94 @@
+<style>
+    .custom-slider-section{
+      /* padding:30px 0px; */
+
+    }
+    .main-image-desk{
+        width:100%;
+  }
+   a.mobile{
+      display: none;
+  }
+  @media(max-width:767px){
+    a.mobile{
+      display: block;
+      width:100%
+  }
+    a.desktop {
+    display: none;
+}
+  }
+</style>
+
+<section class="custom-slider-section page-width">
+  <div class="main-page-width">
+    <div class="slider-main-rapper">
+      <div class="top-rapper">
+        <div class="heading">{{ section.settings.heading }}</div>
+      </div>
+      <div class="bottom-wrapper">
+        <div class="slider-wrapper owl-carousel owl-theme" id="slider">
+          {% for block in section.blocks %}
+            <div class="item block-wrapper">
+              <a class="desktop" href="{{ block.settings.desk-url }}"
+        ><img class="imgdesk-2" src="{{ block.settings.desk-img | image_url: width:3840 }}"
+           ></a>
+              
+
+      <a class="mobile" href="{{ block.settings.mob-url}}">
+        <img class="imgmob-2" src="{{ block.settings.mob-img | image_url: width:3840 }}"
+          ></a>
+        
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "OWL slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "slider",
+      "type": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desk-img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "desk-url",
+          "label": "URL Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "mob-img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "mob-url",
+          "label": "URL Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OWL slider"
+    }
+  ]
+}
+{% endschema %}

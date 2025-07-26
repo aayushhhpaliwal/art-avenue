@@ -1,0 +1,46 @@
+<style> 
+  #mycustom-badge-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+
+  #mycustom-badge {
+    width: 100%;
+    height: 100%;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: rotate;
+    animation-range: normal;
+  }
+  
+  .custom-per {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    z-index: 1;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<div id="mycustom-badge-container">
+  <div class="custom-per">%</div>
+  <img src="https://cdn.shopify.com/s/files/1/0427/4690/4736/files/Untitled_design_76_1046d83f-e24b-4e51-a561-bbf0ab9d1212.png?v=1734938595" id="mycustom-badge">
+</div>

@@ -1,0 +1,340 @@
+{% schema %}
+{
+  "name": "Six Banner Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "select",
+      "id": "background_position",
+      "label": "Background Position",
+      "options": [
+        {
+          "value": "center center",
+          "label": "Center"
+        },
+        {
+          "value": "top center",
+          "label": "Top"
+        },
+        {
+          "value": "bottom center",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout Heights"
+    },
+    {
+      "type": "range",
+      "id": "mobile_row1_height",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "First Row Height",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "mobile_row2_height",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Second Row Height",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "mobile_row3_height",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Third Row Height",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "mobile_row4_height",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Fourth Row Height",
+      "default": 130
+    },
+    {
+      "type": "range",
+      "id": "mobile_row5_height",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Fifth Row Height",
+      "default": 230
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "banner_image",
+          "label": "Banner Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "banner_image_mobile",
+          "label": "Banner Image (Mobile)"
+        },
+        {
+          "type": "url",
+          "id": "banner_link",
+          "label": "Banner Link"
+        },
+        {
+          "type": "text",
+          "id": "banner_title",
+          "label": "Banner Title",
+          "default": "Banner Title"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Six Banner Grid",
+      "blocks": [
+        {
+          "type": "banner"
+        },
+        {
+          "type": "banner"
+        },
+        {
+          "type": "banner"
+        },
+        {
+          "type": "banner"
+        },
+        {
+          "type": "banner"
+        },
+        {
+          "type": "banner"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .six-banner-wrapper {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: {{ section.settings.background_position }};
+    background-repeat: no-repeat;
+  }
+
+  .six-banner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .six-banner-block {
+    position: relative;
+    width: 100%;
+    /* padding-bottom: 100%; */
+        padding-bottom: 69%;
+    overflow: hidden;
+  }
+
+  .six-banner-block img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .six-banner-block:hover img {
+    /* transform: scale(1.05); */
+  }
+
+  .six-banner-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .six-banner-heading {
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .desktop-banner-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-banner-image {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  @media screen and (max-width: 768px) {
+    .six-banner-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      gap: 0;
+    }
+
+    .six-banner-block {
+      width: 100%;
+      padding-bottom: 0;
+      height: auto;
+      position: relative;
+    }
+
+    .six-banner-block img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Remove fixed grid areas since we want dynamic heights */
+    .six-banner-block:nth-child(n) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .desktop-banner-image {
+      display: none;
+    }
+
+    .mobile-banner-image {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .six-banner-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      gap: 0;
+    }
+
+    .six-banner-block {
+      height: auto;
+    }
+
+    .six-banner-block img {
+      position: relative;
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+</style>
+
+<div
+  class="six-banner-wrapper"
+  {% if section.settings.background_image != blank %}
+    style="background-image: url('{{ section.settings.background_image | img_url: 'master' }}');"
+  {% endif %}
+>
+  {% if section.settings.background_image_mobile != blank %}
+    <style>
+      @media screen and (max-width: 768px) {
+        .six-banner-wrapper {
+          background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}') !important;
+        }
+      }
+    </style>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="six-banner-container">
+      {% for block in section.blocks %}
+        {% if block.type == 'banner' and block.settings.banner_image != blank %}
+          <div class="six-banner-block" {{ block.shopify_attributes }}>
+            {% if block.settings.banner_link != blank %}
+              <a href="{{ block.settings.banner_link }}">
+            {% endif %}
+            <img
+              class="desktop-banner-image"
+              src="{{ block.settings.banner_image | img_url: 'master' }}"
+              alt="{{ block.settings.banner_title | escape }}"
+              loading="lazy"
+              width="{{ block.settings.banner_image.width }}"
+              height="{{ block.settings.banner_image.height }}"
+            >
+            {% if block.settings.banner_image_mobile != blank %}
+              <img
+                class="mobile-banner-image"
+                src="{{ block.settings.banner_image_mobile | img_url: 'master' }}"
+                alt="{{ block.settings.banner_title | escape }}"
+                loading="lazy"
+                width="{{ block.settings.banner_image_mobile.width }}"
+                height="{{ block.settings.banner_image_mobile.height }}"
+              >
+            {% endif %}
+            {% if block.settings.banner_title != blank %}
+              <div class="six-banner-text-wrapper">
+                <h3 class="six-banner-heading" style="color: {{ block.settings.title_color }}">
+                  {{ block.settings.banner_title }}
+                </h3>
+              </div>
+            {% endif %}
+            {% if block.settings.banner_link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
