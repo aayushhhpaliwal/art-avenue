@@ -86,7 +86,7 @@
   <span style="display: inline-flex; width: 16px; height: 16px; margin-right: 8px;">
     {{- 'icon-search.svg' | inline_asset_content -}}
   </span>
-  <span>{{ 'general.search.search' | t }} For</span>
+  <span>{% if search_label_text %}{{ search_label_text }}{% else %}{{ 'general.search.search' | t }} For{% endif %}</span>
 <div class="icon-new">
 <div>Bedsheets</div>  
 <div>Cushion Covers</div>  
@@ -124,5 +124,6 @@
         {%- else -%}
           </search-form>
         {%- endif -%}
+      </search-form>
    
 

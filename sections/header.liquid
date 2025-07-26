@@ -130,7 +130,7 @@
       endif
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
+        render 'header-search', input_id: 'Search-In-Modal-1', search_label_text: section.settings.search_label_text
       endif
     -%}
 
@@ -203,7 +203,7 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-       <div class="desk-search"> {% render 'header-search', input_id: 'Search-In-Modal' %}</div>
+       <div class="desk-search"> {% render 'header-search', input_id: 'Search-In-Modal', search_label_text: section.settings.search_label_text %}</div>
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -578,6 +578,17 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "header",
+      "content": "Search Settings"
+    },
+    {
+      "type": "text",
+      "id": "search_label_text",
+      "label": "Search Label Text",
+      "default": "Search For",
+      "info": "Text to display before the animated suggestions in the search bar"
     },
     {
       "type": "header",

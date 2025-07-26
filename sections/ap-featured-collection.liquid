@@ -210,7 +210,8 @@
                                 show_vendor: section.settings.show_vendor,
                                 show_rating: section.settings.show_rating,
                                 section_id: section.id,
-                                quick_add: section.settings.quick_add
+                                quick_add: section.settings.quick_add,
+                                add_to_cart_bg_color: section.settings.add_to_cart_bg_color
                             %}
                         </li>
                     {%- else -%}
@@ -543,6 +544,12 @@
                         "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
                     }
                 ]
+            },
+            {
+                "type": "color",
+                "id": "add_to_cart_bg_color",
+                "label": "Add to Cart Button Background Color",
+                "default": "#d17769"
             },
             {
                 "type": "header",

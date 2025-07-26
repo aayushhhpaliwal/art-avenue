@@ -301,7 +301,7 @@
               href="{{ card_product.url }}"
               class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
               aria-labelledby="title-{{ section_id }}-{{ card_product.id }}"
-              style="background-color: rgb(209 119 105); color:white;"
+              style="background-color: {{ add_to_cart_bg_color | default: '#d17769' }}; color:white;"
             >
               <span>Buy Now</span>
               {%- if horizontal_quick_add -%}
@@ -317,7 +317,7 @@
               href="{{ card_product.url }}"
               class="quick-add__submit button button--full-width button--secondary"
               aria-labelledby="title-{{ section_id }}-{{ card_product.id }}"
-              style="background-color: rgb(209 119 105); color:white;"
+              style="background-color: {{ add_to_cart_bg_color | default: '#d17769' }}; color:white;"
             >
               <span>Buy Now</span>
             </a>
