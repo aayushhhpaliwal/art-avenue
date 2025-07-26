@@ -88,9 +88,15 @@
   </span>
   <span>{% if search_label_text %}{{ search_label_text }}{% else %}{{ 'general.search.search' | t }} For{% endif %}</span>
 <div class="icon-new">
-<div>Bedsheets</div>  
-<div>Cushion Covers</div>  
-<div>Dining Sets</div>  
+  {%- if search_suggestions and search_suggestions.size > 0 -%}
+    {%- for suggestion in search_suggestions -%}
+      <div>{{ suggestion | strip }}</div>
+    {%- endfor -%}
+  {%- else -%}
+    <div>Bedsheets</div>  
+    <div>Cushion Covers</div>  
+    <div>Dining Sets</div>  
+  {%- endif -%}
 </div>
 </label>
 
@@ -124,6 +130,5 @@
         {%- else -%}
           </search-form>
         {%- endif -%}
-      </search-form>
    
 
