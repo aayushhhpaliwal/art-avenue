@@ -25,7 +25,14 @@
           "settings": {
             "dialog_title": "Dialog Title",
             "dialog_message": "This is a custom dialog message.",
-            "close_button_text": "Close"
+            "close_button_text": "Closexcvhbxgh"
+          }
+        },
+        "custom_popup_gi94U8": {
+          "type": "custom_popup",
+          "settings": {
+            "popup_content": "<p>Hello</p>",
+            "show_offer_popup": true
           }
         },
         "custom_liquid_xLVFPf": {
@@ -136,6 +143,7 @@
         "title",
         "price",
         "custom_dialog_gYVKE9",
+        "custom_popup_gi94U8",
         "custom_liquid_xLVFPf",
         "custom_liquid_94PrCb",
         "variant_picker",
