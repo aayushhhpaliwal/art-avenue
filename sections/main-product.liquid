@@ -809,7 +809,7 @@
                     </span>
                     <span style="width:30%; text-align:right;">
                       {% if block.settings.arrow_icon %}
-                        <img src="{{ block.settings.arrow_icon | image_url: width: 14 }}" style="width:14px;" alt="Arrow">
+                        <img src="{{ block.settings.arrow_icon | image_url: width: 14 }}" style="width:14px;" alt="Arrow" width="14" height="14">
                       {% endif %}
                     </span>
                   </div>
@@ -818,7 +818,168 @@
                 <div class="custom-dialog-overlay-{{ block.id }}" id="customPopupOverlay-{{ block.id }}">
                   <div class="custom-popup-{{ block.id }}">
                     <button class="custom-close-button-{{ block.id }}" onclick="closeCustomPopup('{{ block.id }}')">&times;</button>
-                    {% render 'main-offer-popup' %}
+                    <div class="custom-discount-popup-{{ block.id }}">
+                      <style>
+                        .custom-discount-popup-{{ block.id }} {
+                          background-color: #f9f9f9;
+                          border-radius: 10px;
+                          padding: 20px;
+                          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        }
+                        .custom-flex-{{ block.id }} {
+                          display: flex;
+                        }
+                        .custom-flex-col-{{ block.id }} {
+                          flex-direction: column;
+                          text-align: left;
+                          line-height: normal;
+                        }
+                        .custom-gap-6-{{ block.id }} {
+                          gap: 1.5rem;
+                        }
+                        .custom-gap-3-{{ block.id }} {
+                          gap: 0.75rem;
+                        }
+                        .custom-border-dashed-{{ block.id }} {
+                          border-style: dashed;
+                        }
+                        .custom-border-2-{{ block.id }} {
+                          border-width: 2px;
+                        }
+                        .custom-rounded-xl-{{ block.id }} {
+                          border-radius: 0.75rem;
+                        }
+                        .custom-mx-4-{{ block.id }} {
+                          margin-left: 1rem;
+                          margin-right: 1rem;
+                        }
+                        .custom-body4-{{ block.id }} {
+                          font-size: 1.2em;
+                          color: #333;
+                        }
+                        .custom-body6-{{ block.id }} {
+                          font-size: 0.9em;
+                          color: rgb(115, 115, 115);
+                        }
+                        .custom-font-semibold-{{ block.id }} {
+                          font-weight: 600;
+                        }
+                        .custom-justify-end-{{ block.id }} {
+                          justify-content: flex-end;
+                        }
+                        .custom-items-center-{{ block.id }} {
+                          align-items: center;
+                          gap: 10px;
+                        }
+                        .copy-notification-{{ block.id }} {
+                          position: fixed;
+                          bottom: 20px;
+                          left: 50%;
+                          transform: translateX(-50%);
+                          background-color: black;
+                          color: white;
+                          padding: 10px;
+                          border-radius: 5px;
+                          width: fit-content;
+                          display: none;
+                          z-index: 1000;
+                        }
+                      </style>
+                      
+                      <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }} custom-gap-6-{{ block.id }} custom-discount-popup-{{ block.id }}" style="width: 100%;">
+                        <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }} custom-gap-3-{{ block.id }}" style="width: 100%;">
+                          <div class="custom-flex-{{ block.id }} custom-gap-2-{{ block.id }} custom-items-center-{{ block.id }}" style="width: 100%;">
+                            <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="gap:1px;">
+                              <img src="https://cdn.shopify.com/s/files/1/0427/4690/4736/files/Untitled_design_74.png?v=1734346975" style="width:30px;" alt="Discount Icon" width="30" height="30">
+                            </div>
+                            <div class="custom-flex-{{ block.id }} custom-gap-1-{{ block.id }} custom-flex-col-{{ block.id }}" style="flex: 1;">
+                              <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="width: 100%;">
+                                <div class="custom-body4-{{ block.id }}"><span>Get <span class="custom-font-semibold-{{ block.id }}">5% Off</span></span></div>
+                              </div>
+                              <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="width: 100%;">
+                                <div class="custom-body6-{{ block.id }}"><span>on order above ₹1999</span></div>
+                              </div>
+                            </div>
+                            <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                              <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="flex: 1;">
+                                <p class="custom-body6-{{ block.id }}" style="color: rgb(115, 115, 115); text-align: right; line-height: 0;">Save</p>
+                              </div>
+                              <div class="custom-flex-{{ block.id }} custom-justify-end-{{ block.id }} custom-flex-col-{{ block.id }}" style="flex: 1;">
+                                <p class="custom-body2-{{ block.id }} custom-font-bold-{{ block.id }}" style="color: rgb(14, 131, 137); line-height: 0;">
+                                  {% assign five_percent = product.price | times: 0.05 %}
+                                  ₹{{ five_percent | money_without_currency }}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="custom-flex-{{ block.id }} custom-border-dashed-{{ block.id }} custom-border-2-{{ block.id }} custom-rounded-xl-{{ block.id }} custom-mx-4-{{ block.id }} custom-flex-row-{{ block.id }}" style="flex: 1; border-color: rgb(229, 229, 229);">
+                            <div role="button" class="custom-flex-{{ block.id }}" style="width: 100%;">
+                              <div class="custom-flex-{{ block.id }} custom-gap-2-{{ block.id }} custom-px-4-{{ block.id }} custom-items-center-{{ block.id }} custom-flex-row-{{ block.id }}" style="flex: 1; padding-top: 10px; padding-bottom: 10px; width: 100%;">
+                                <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                                </div>
+                                <div class="custom-flex-{{ block.id }} custom-flex-row-{{ block.id }}" style="flex: 1;">
+                                  <div class="custom-body4-{{ block.id }} custom-font-semibold-{{ block.id }}">
+                                    <span>Code: <span class="custom-font-semibold-{{ block.id }}" id="coupon1-{{ block.id }}">VAAREE5</span></span>
+                                  </div>
+                                </div>
+                                <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16" id="copy1-{{ block.id }}" style="cursor: pointer;" alt="Copy Icon">
+                                    <path fill="#212121" d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }} custom-gap-3-{{ block.id }}" style="width: 100%;">
+                          <div class="custom-flex-{{ block.id }} custom-gap-2-{{ block.id }} custom-items-center-{{ block.id }}" style="width: 100%;">
+                            <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                              <img src="https://cdn.shopify.com/s/files/1/0427/4690/4736/files/Untitled_design_74.png?v=1734346975" style="width:30px;" alt="Discount Icon" width="30" height="30">
+                            </div>
+                            <div class="custom-flex-{{ block.id }} custom-gap-1-{{ block.id }} custom-flex-col-{{ block.id }}" style="flex: 1;">
+                              <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="width: 100%;">
+                                <div class="custom-body4-{{ block.id }}"><span>Get <span class="custom-font-semibold-{{ block.id }}">₹100 Off</span></span></div>
+                              </div>
+                              <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="width: 100%;">
+                                <div class="custom-body6-{{ block.id }}"><span>on order above ₹1500</span></div>
+                              </div>
+                            </div>
+                            <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                              <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}" style="flex: 1;">
+                                <p class="custom-body6-{{ block.id }}" style="color: rgb(115, 115, 115); text-align: right; line-height: 0;">Save</p>
+                              </div>
+                              <div class="custom-flex-{{ block.id }} custom-justify-end-{{ block.id }} custom-flex-col-{{ block.id }}" style="flex: 1;">
+                                <p class="custom-body2-{{ block.id }} custom-font-bold-{{ block.id }}" style="color: rgb(14, 131, 137); line-height: 0;">₹100</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="custom-flex-{{ block.id }} custom-border-dashed-{{ block.id }} custom-border-2-{{ block.id }} custom-rounded-xl-{{ block.id }} custom-mx-4-{{ block.id }} custom-flex-row-{{ block.id }}" style="flex: 1; border-color: rgb(229, 229, 229);">
+                            <div role="button" class="custom-flex-{{ block.id }}" style="width: 100%;">
+                              <div class="custom-flex-{{ block.id }} custom-gap-2-{{ block.id }} custom-px-4-{{ block.id }} custom-items-center-{{ block.id }} custom-flex-row-{{ block.id }}" style="flex: 1; padding-top: 10px; padding-bottom: 10px; width: 100%;">
+                                <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" alt="Coupon Icon">
+                                    <use xlink:href="/build/_assets/main-7WVPYQKA.svg#outline-coupon-2"></use>
+                                  </svg>
+                                </div>
+                                <div class="custom-flex-{{ block.id }} custom-flex-row-{{ block.id }}" style="flex: 1;">
+                                  <div class="custom-body4-{{ block.id }} custom-font-semibold-{{ block.id }}">
+                                    <span>Code: <span class="custom-font-semibold-{{ block.id }}" id="coupon2-{{ block.id }}">WELCOME100</span></span>
+                                  </div>
+                                </div>
+                                <div class="custom-flex-{{ block.id }} custom-flex-col-{{ block.id }}">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16" id="copy2-{{ block.id }}" style="cursor: pointer;" alt="Copy Icon">
+                                    <path fill="#212121" d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="copyNotification-{{ block.id }}" class="copy-notification-{{ block.id }}">
+                        Copied!
+                      </div>
+                    </div>
                   </div>
                 </div>
 
