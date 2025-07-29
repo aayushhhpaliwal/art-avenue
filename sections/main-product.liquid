@@ -63,6 +63,84 @@
     details[open] .icon-minus {
       opacity: 1;
     }
+
+    /* Custom Dialog and Popup Styles */
+    .custom-dialog-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+    }
+
+    .custom-dialog-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      max-width: 500px;
+      width: 90%;
+      display: none;
+    }
+
+    .custom-dialog-content {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .custom-dialog-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .custom-dialog-message {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .custom-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .custom-close-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .custom-close-button:hover {
+      color: #000;
+    }
+
+    .popup-content {
+      margin-top: 20px;
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -102,22 +180,41 @@
   <div class="page-width">
 
 {%  render 'ap-breadcrumb' %}
-<div class="custom-dialog-overlay" id="dialogOverlay" onclick="closeDialog()"></div>
-<div class="custom-dialog-box" id="dialogBox">
-    <div class="custom-dialog-content">
-        <img id="dialogImage" src="" alt="Dialog Image"/>
-        <p id="dialogTitle" class="custom-dialog-title"></p>
-    </div>
-    <p id="dialogMessage" class="custom-dialog-message"></p>
-    <button onclick="closeDialog()">Close</button>
-</div>
 
-  <div class="custom-dialog-overlay" id="customPopupOverlay">
-        <div class="custom-popup">
-            <button class="custom-close-button" onclick="closeCustomPopup()">&times;</button>    
-          {%  render 'main-offer-popup' %}
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'custom_dialog' -%}
+      <div class="custom-dialog-overlay" id="dialogOverlay-{{ block.id }}" onclick="closeDialog('{{ block.id }}')"></div>
+      <div class="custom-dialog-box" id="dialogBox-{{ block.id }}">
+        <div class="custom-dialog-content">
+          {%- if block.settings.dialog_image != blank -%}
+            <img id="dialogImage-{{ block.id }}" src="{{ block.settings.dialog_image | image_url: width: 400 }}" alt="{{ block.settings.dialog_title | escape }}" width="400" height="300"/>
+          {%- endif -%}
+          {%- if block.settings.dialog_title != blank -%}
+            <p id="dialogTitle-{{ block.id }}" class="custom-dialog-title">{{ block.settings.dialog_title }}</p>
+          {%- endif -%}
         </div>
-    </div>
+        {%- if block.settings.dialog_message != blank -%}
+          <p id="dialogMessage-{{ block.id }}" class="custom-dialog-message">{{ block.settings.dialog_message }}</p>
+        {%- endif -%}
+        <button onclick="closeDialog('{{ block.id }}')">{{ block.settings.close_button_text | default: 'Close' }}</button>
+      </div>
+    {%- when 'custom_popup' -%}
+      <div class="custom-dialog-overlay" id="customPopupOverlay-{{ block.id }}">
+        <div class="custom-popup">
+          <button class="custom-close-button" onclick="closeCustomPopup('{{ block.id }}')">&times;</button>
+          {%- if block.settings.popup_content != blank -%}
+            <div class="popup-content">
+              {{ block.settings.popup_content }}
+            </div>
+          {%- endif -%}
+          {%- if block.settings.show_offer_popup -%}
+            {% render 'main-offer-popup' %}
+          {%- endif -%}
+        </div>
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
@@ -776,6 +873,32 @@
 
     <script type="application/ld+json">
       {{ product | structured_data }}
+    </script>
+
+    <script>
+      function closeDialog(blockId) {
+        const overlay = document.getElementById('dialogOverlay-' + blockId);
+        const dialogBox = document.getElementById('dialogBox-' + blockId);
+        if (overlay) overlay.style.display = 'none';
+        if (dialogBox) dialogBox.style.display = 'none';
+      }
+
+      function closeCustomPopup(blockId) {
+        const overlay = document.getElementById('customPopupOverlay-' + blockId);
+        if (overlay) overlay.style.display = 'none';
+      }
+
+      function openDialog(blockId) {
+        const overlay = document.getElementById('dialogOverlay-' + blockId);
+        const dialogBox = document.getElementById('dialogBox-' + blockId);
+        if (overlay) overlay.style.display = 'block';
+        if (dialogBox) dialogBox.style.display = 'block';
+      }
+
+      function openCustomPopup(blockId) {
+        const overlay = document.getElementById('customPopupOverlay-' + blockId);
+        if (overlay) overlay.style.display = 'block';
+      }
     </script>
   </div>
 </product-info>
@@ -2128,6 +2251,54 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "custom_dialog",
+      "name": "Custom Dialog",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "dialog_image",
+          "label": "Dialog Image"
+        },
+        {
+          "type": "text",
+          "id": "dialog_title",
+          "label": "Dialog Title",
+          "default": "Dialog Title"
+        },
+        {
+          "type": "textarea",
+          "id": "dialog_message",
+          "label": "Dialog Message",
+          "default": "This is a custom dialog message."
+        },
+        {
+          "type": "text",
+          "id": "close_button_text",
+          "label": "Close Button Text",
+          "default": "Close"
+        }
+      ]
+    },
+    {
+      "type": "custom_popup",
+      "name": "Custom Popup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "popup_content",
+          "label": "Popup Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_offer_popup",
+          "label": "Show Offer Popup",
+          "default": true
         }
       ]
     }
