@@ -1,1 +1,346 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"custom_liquid_xLVFPf":{"type":"custom_liquid","settings":{"custom_liquid":"{% render 'offer-popup' %}"}},"custom_liquid_94PrCb":{"type":"custom_liquid","settings":{"custom_liquid":"<style>\n.offfer-img{\nwidth:80%;\n}\n@media screen and (max-width: 750px) {\n.offfer-img{\nwidth:100%;\n}\n}\n<\/style>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0427\/4690\/4736\/files\/httpsvaaree.comproductsrighto-storage-container.png?v=1736509075\" class=\"offfer-img\">\n<hr width=\"100%\">"}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"custom_liquid_yQ7q3G":{"type":"custom_liquid","settings":{"custom_liquid":"{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <svg width=\"48px\" height=\"48px\" viewBox=\"0 0 24 24\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n                      <rect x=\"0\" fill=\"none\" width=\"24\" height=\"24\"\/>\n\n                      <g>\n\n                      <path d=\"M16.5 4.5c2.206 0 4 1.794 4 4 0 4.67-5.543 8.94-8.5 11.023C9.043 17.44 3.5 13.17 3.5 8.5c0-2.206 1.794-4 4-4 1.298 0 2.522.638 3.273 1.706L12 7.953l1.227-1.746c.75-1.07 1.975-1.707 3.273-1.707m0-1.5c-1.862 0-3.505.928-4.5 2.344C11.005 3.928 9.362 3 7.5 3 4.462 3 2 5.462 2 8.5c0 5.72 6.5 10.438 10 12.85 3.5-2.412 10-7.13 10-12.85C22 5.462 19.538 3 16.5 3z\"\/>\n\n                      <\/g>\n                    <\/svg>\n                  <\/button>\n                {% endif %}"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":true}},"custom_liquid_NqaQ9q":{"type":"custom_liquid","disabled":true,"settings":{"custom_liquid":"<style>\n @keyframes rotate {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes slideRight {\n  0% {\n    transform: translateX(-100%);\n    opacity: 0;\n  }\n  100% {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}\n\n}\n.testimonial-offer-container {\n  display: flex;\n  margin-top: 0.25rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  flex-direction: column;\n  flex: 1 1 0%;\n  max-width: 365px;\n}\n\n.testimonial-offer-inner {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 0%;\n}\n\n.testimonial-offer-button {\n  display: flex;\n  overflow: hidden;\n}\n\n.testimonial-offer-content {\n  display: flex;\n  gap: 0.375rem;\n  border-radius: 0.75rem;\n  padding: 0.25rem 0.75rem;\n  position: relative;\n  align-items: center;\n  overflow: hidden;\n  flex: 1 1 0%;\n  background-color: rgba(232, 196, 99, 0.25);\n}\n\n.testimonial-icon-container {\n  display: flex;\n  position: relative;\n  z-index: 0;\n}\n\n.testimonial-icon-rotate {\n  display: flex;\n  animation: rotate 5s linear infinite;\n}\n\n.testimonial-icon-overlay {\n  display: flex;\n  position: absolute;\n  flex: 1 1 0%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.testimonial-text {\n  display: flex;\n  z-index: 0;\n}\n\n.testimonial-text-content {\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n\n.testimonial-chevron {\n  display: flex;\n  margin-left: auto;\n  z-index: 0;\n}\n\n.testimonial-highlight {\n  display: flex;\n  position: absolute;\n  flex: 1 1 0%;\n  z-index: -1;\n  animation: slideRight 3s ease infinite;\n  animation-fill-mode: forwards;\n}\n\n.testimonial-highlight-image {\n  position: relative;\n  width: 120px;\n  height: 79.6639px;\n  aspect-ratio: 1.50633 \/ 1;\n}\n<\/style>\n<div class=\"testimonial-offer-container\">\n  <div class=\"testimonial-offer-inner\">\n    <div role=\"button\" class=\"testimonial-offer-button\">\n      <div class=\"testimonial-offer-content\">\n        <div class=\"testimonial-icon-container\">\n          <div class=\"testimonial-icon-rotate\">\n            <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\" class=\"w-8 h-8\">\n              <use xlink:href=\"\/build\/_assets\/main-3ILJZYF5.svg#solid-coupon-background\"><\/use>\n            <\/svg>\n          <\/div>\n          <div class=\"testimonial-icon-overlay\">\n            <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\" class=\"w-8 h-8\">\n              <use xlink:href=\"\/build\/_assets\/main-3ILJZYF5.svg#outline-percentage\"><\/use>\n            <\/svg>\n          <\/div>\n        <\/div>\n        <div class=\"testimonial-text\">\n          <div class=\"testimonial-text-content\">\n            <span>Check best offers for you<\/span>\n          <\/div>\n        <\/div>\n        <div class=\"testimonial-chevron\">\n          <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 24 24\" class=\"w-4 h-4\">\n            <use xlink:href=\"\/build\/_assets\/main-3ILJZYF5.svg#outline-chevron-down\"><\/use>\n          <\/svg>\n        <\/div>\n        <div class=\"testimonial-highlight\">\n          <div class=\"testimonial-highlight-image\">\n            <img alt=\"highlight\" class=\"\" loading=\"lazy\" srcset=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=24 24w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=32 32w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=48 48w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=64 64w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=96 96w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=144 144w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=192 192w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=213 213w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=256 256w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=320 320w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=341 341w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=384 384w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=455 455w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=480 480w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=512 512w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=533 533w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=576 576w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=640 640w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=683 683w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=768 768w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=800 800w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=1024 1024w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=1025 1025w, https:\/\/cdn.shopify.com\/s\/files\/1\/0632\/2526\/6422\/files\/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=1200 1200w\" sizes=\"100vw\" style=\"width: 120px; height: 79.6639px; aspect-ratio: 1.50633 \/ 1;\"><\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>"}},"custom_liquid_pXLeaW":{"type":"custom_liquid","settings":{"custom_liquid":"{% render 'offer-card' %}"}},"custom_liquid_WdMfbY":{"type":"custom_liquid","settings":{"custom_liquid":"<div id='my-main-div-ZIP-ens-manual'> <\/div>"}},"custom_liquid_gHaFD7":{"type":"custom_liquid","settings":{"custom_liquid":"<style>\n@media screen and (max-width: 750px) {\n.flex-container.gap-2.rounded-md.p-2.flex-row {\n    width: 100%;\n}<\/style>\n{% render 'trust-badges' %}"}},"quantity_selector":{"type":"quantity_selector","disabled":true,"settings":{}},"description":{"type":"description","disabled":true,"settings":{}},"collapsible_tab_XYKbr8":{"type":"collapsible_tab","settings":{"heading":"Specification","icon":"none","content":"","page":""}},"collapsible_tab_VncBy7":{"type":"collapsible_tab","settings":{"heading":"Product Description","icon":"none","content":"<p>{{ product.description }}<\/p>","page":""}},"collapsible_tab_GGr8h9":{"type":"collapsible_tab","settings":{"heading":"Additional Info","icon":"none","content":"<p><strong>Seller Name:<br\/><\/strong>ART AVENUE<br\/><br\/><strong>Address:<br\/><\/strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br\/><br\/><strong>Manufacture Address:<br\/><\/strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br\/><br\/><strong>Seller Address:<br\/><\/strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br\/><br\/><strong>Country of Origin:<br\/><\/strong>India<\/p>","page":""}},"collapsible_tab_DqAU7Y":{"type":"collapsible_tab","settings":{"heading":"Return and Exchange Policy","icon":"none","content":"<p><strong>48 Hours Returnable<\/strong><\/p><ul><li>Return & exchange window for this product is open for 48 hours post delivery.<\/li><li>Product to be returned in original packaging including external box with all the tags.<\/li><li>Products cannot be exchanged or returned once used.<\/li><\/ul><p>Read more about Return & Exchange policy here : <a href=\"https:\/\/vaaree.com\/policies\/refund-policy\">Refund policy<\/a><\/p>","page":""}}},"block_order":["title","price","custom_liquid_xLVFPf","custom_liquid_94PrCb","variant_picker","custom_liquid_yQ7q3G","buy_buttons","custom_liquid_NqaQ9q","custom_liquid_pXLeaW","custom_liquid_WdMfbY","custom_liquid_gHaFD7","quantity_selector","description","collapsible_tab_XYKbr8","collapsible_tab_VncBy7","collapsible_tab_GGr8h9","collapsible_tab_DqAU7Y"],"custom_css":[".button--full-width {display: flex; \/* width: 100%; *\/ width: calc(145% - 150px) !important; margin-top: -85px; margin-left: 80px;}",".button--full-width {width: calc(120% - 150px) !important;}",".price__regular .price-item--regular {font-size: 2rem;}"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-5","media_size":"medium","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"columns","media_position":"left","image_zoom":"hover","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"featured_collection_MizTKM":{"type":"featured-collection","custom_css":["button.slider-button.slider-button--prev {left: 0; top: 50%; color: black; background: white; border-radius: 30px; position: absolute;}","button.slider-button.slider-button--next {right: 0; top: 50%; color: black; background: white; border-radius: 30px; position: absolute;}",".slider-counter {display: none !important;}",".collection__title .title:not(:only-child) {\/* margin-bottom: 1rem; *\/ text-align: center; font-size: 3rem;}",".collection__description.body.rte.scroll-trigger.animate--slide-in {display: none;}"],"settings":{"title":"View similar products","heading_size":"h1","description":"","show_description":true,"description_style":"body","collection":"all-products","products_to_show":13,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-5","image_ratio":"portrait","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"bt_collection_slidernew_icPttP":{"type":"bt-collection-slidernew","blocks":{"collection_UNh9Bc":{"type":"collection","settings":{"collhed":"Wallpaper","imgpic":"shopify:\/\/shop_images\/20240706_122124.jpg","url":"shopify:\/\/collections\/wallpapers","descriptionalign":"center"}},"collection_gcPVAz":{"type":"collection","settings":{"collhed":"Trays","imgpic":"shopify:\/\/shop_images\/81mMHTLJPSL._AC_UF894_1000_QL80.jpg","url":"shopify:\/\/collections\/trays","descriptionalign":"center"}},"collection_yXdfYX":{"type":"collection","settings":{"collhed":"Bags","imgpic":"shopify:\/\/shop_images\/totebags-2048px-3945.webp","url":"shopify:\/\/collections\/all-bags-best-kilim-bags-for-sale-art-avenue","descriptionalign":"center"}},"collection_mECYmR":{"type":"collection","settings":{"collhed":"Cushion","imgpic":"shopify:\/\/shop_images\/1-15_926cb65a-5d7a-4087-9a71-a46ba3a2e9d3.jpg","url":"shopify:\/\/collections\/cushion-covers","descriptionalign":"center"}},"collection_fr89eE":{"type":"collection","settings":{"collhed":"Rugs","imgpic":"shopify:\/\/shop_images\/SalesEvent_66081_Lifestyle_3.jpg","url":"shopify:\/\/collections\/rugs","descriptionalign":"center"}},"collection_PTkdTc":{"type":"collection","settings":{"collhed":"Furniture","imgpic":"shopify:\/\/shop_images\/full-house-interior-work-500x500.webp","url":"shopify:\/\/collections\/all-furniture","descriptionalign":"center"}},"collection_NnKNwB":{"type":"collection","settings":{"collhed":"Carpet","imgpic":"shopify:\/\/shop_images\/LUXAVION0047_0000_20211216_101619-800x800_b7bc4ad1-476f-4f85-ad9f-7dd6a792f387.jpg","url":"shopify:\/\/collections\/carpets","descriptionalign":"center"}},"collection_Azfx6y":{"type":"collection","settings":{"collhed":"Painting","imgpic":"shopify:\/\/shop_images\/medium-new-design-6-modern-art-wall-painting-for-home-wall-original-imagjp9hwuzcnhgm.webp","url":"shopify:\/\/collections\/paintings-wall-art","descriptionalign":"center"}}},"block_order":["collection_UNh9Bc","collection_gcPVAz","collection_yXdfYX","collection_mECYmR","collection_fr89eE","collection_PTkdTc","collection_NnKNwB","collection_Azfx6y"],"settings":{"headtext":"Explore More Categories","clr":"#000000","textalign":"center","collection_clr":"#000000","brclr":"#000000"}},"related-products":{"type":"related-products","custom_css":[".collection__title .title:not(:only-child) {margin-bottom: 1rem; text-align: center;}","h2 {text-align: center; font-size: 3rem;}"],"settings":{"heading":"Recently Viewed Products","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}},"custom_liquid_7aryaQ":{"type":"custom-liquid","settings":{"custom_liquid":"","color_scheme":"","padding_top":40,"padding_bottom":52}}},"order":["main","featured_collection_MizTKM","bt_collection_slidernew_icPttP","related-products","custom_liquid_7aryaQ"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_dialog_gYVKE9": {
+          "type": "custom_dialog",
+          "settings": {
+            "dialog_image": "shopify://shop_images/1_-_Copy.webp",
+            "dialog_title": "Dialog Title",
+            "dialog_message": "This is a custom dialog message.",
+            "close_button_text": "Closexcvhbxgh"
+          }
+        },
+        "custom_popup_gi94U8": {
+          "type": "custom_popup",
+          "settings": {
+            "popup_content": "<p>Hellogfhfgh</p>",
+            "show_offer_popup": true
+          }
+        },
+        "custom_liquid_xLVFPf": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'offer-popup' %}"
+          }
+        },
+        "custom_liquid_94PrCb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n.offfer-img{\nwidth:80%;\n}\n@media screen and (max-width: 750px) {\n.offfer-img{\nwidth:100%;\n}\n}\n</style>\n<img src=\"https://cdn.shopify.com/s/files/1/0427/4690/4736/files/httpsvaaree.comproductsrighto-storage-container.png?v=1736509075\" class=\"offfer-img\">\n<hr width=\"100%\">"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "custom_liquid_yQ7q3G": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <svg width=\"48px\" height=\"48px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                      <rect x=\"0\" fill=\"none\" width=\"24\" height=\"24\"/>\n\n                      <g>\n\n                      <path d=\"M16.5 4.5c2.206 0 4 1.794 4 4 0 4.67-5.543 8.94-8.5 11.023C9.043 17.44 3.5 13.17 3.5 8.5c0-2.206 1.794-4 4-4 1.298 0 2.522.638 3.273 1.706L12 7.953l1.227-1.746c.75-1.07 1.975-1.707 3.273-1.707m0-1.5c-1.862 0-3.505.928-4.5 2.344C11.005 3.928 9.362 3 7.5 3 4.462 3 2 5.462 2 8.5c0 5.72 6.5 10.438 10 12.85 3.5-2.412 10-7.13 10-12.85C22 5.462 19.538 3 16.5 3z\"/>\n\n                      </g>\n                    </svg>\n                  </button>\n                {% endif %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_NqaQ9q": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<style>\n @keyframes rotate {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes slideRight {\n  0% {\n    transform: translateX(-100%);\n    opacity: 0;\n  }\n  100% {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}\n\n}\n.testimonial-offer-container {\n  display: flex;\n  margin-top: 0.25rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  flex-direction: column;\n  flex: 1 1 0%;\n  max-width: 365px;\n}\n\n.testimonial-offer-inner {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 0%;\n}\n\n.testimonial-offer-button {\n  display: flex;\n  overflow: hidden;\n}\n\n.testimonial-offer-content {\n  display: flex;\n  gap: 0.375rem;\n  border-radius: 0.75rem;\n  padding: 0.25rem 0.75rem;\n  position: relative;\n  align-items: center;\n  overflow: hidden;\n  flex: 1 1 0%;\n  background-color: rgba(232, 196, 99, 0.25);\n}\n\n.testimonial-icon-container {\n  display: flex;\n  position: relative;\n  z-index: 0;\n}\n\n.testimonial-icon-rotate {\n  display: flex;\n  animation: rotate 5s linear infinite;\n}\n\n.testimonial-icon-overlay {\n  display: flex;\n  position: absolute;\n  flex: 1 1 0%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.testimonial-text {\n  display: flex;\n  z-index: 0;\n}\n\n.testimonial-text-content {\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n\n.testimonial-chevron {\n  display: flex;\n  margin-left: auto;\n  z-index: 0;\n}\n\n.testimonial-highlight {\n  display: flex;\n  position: absolute;\n  flex: 1 1 0%;\n  z-index: -1;\n  animation: slideRight 3s ease infinite;\n  animation-fill-mode: forwards;\n}\n\n.testimonial-highlight-image {\n  position: relative;\n  width: 120px;\n  height: 79.6639px;\n  aspect-ratio: 1.50633 / 1;\n}\n</style>\n<div class=\"testimonial-offer-container\">\n  <div class=\"testimonial-offer-inner\">\n    <div role=\"button\" class=\"testimonial-offer-button\">\n      <div class=\"testimonial-offer-content\">\n        <div class=\"testimonial-icon-container\">\n          <div class=\"testimonial-icon-rotate\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" class=\"w-8 h-8\">\n              <use xlink:href=\"/build/_assets/main-3ILJZYF5.svg#solid-coupon-background\"></use>\n            </svg>\n          </div>\n          <div class=\"testimonial-icon-overlay\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" class=\"w-8 h-8\">\n              <use xlink:href=\"/build/_assets/main-3ILJZYF5.svg#outline-percentage\"></use>\n            </svg>\n          </div>\n        </div>\n        <div class=\"testimonial-text\">\n          <div class=\"testimonial-text-content\">\n            <span>Check best offers for you</span>\n          </div>\n        </div>\n        <div class=\"testimonial-chevron\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" class=\"w-4 h-4\">\n            <use xlink:href=\"/build/_assets/main-3ILJZYF5.svg#outline-chevron-down\"></use>\n          </svg>\n        </div>\n        <div class=\"testimonial-highlight\">\n          <div class=\"testimonial-highlight-image\">\n            <img alt=\"highlight\" class=\"\" loading=\"lazy\" srcset=\"https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=24 24w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=32 32w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=48 48w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=64 64w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=96 96w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=144 144w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=192 192w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=213 213w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=256 256w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=320 320w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=341 341w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=384 384w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=455 455w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=480 480w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=512 512w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=533 533w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=576 576w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=640 640w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=683 683w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=768 768w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=800 800w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=1024 1024w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=1025 1025w, https://cdn.shopify.com/s/files/1/0632/2526/6422/files/b39483f95a842351d9866fe2bd670796.png?v=1733410234&amp;width=1200 1200w\" sizes=\"100vw\" style=\"width: 120px; height: 79.6639px; aspect-ratio: 1.50633 / 1;\"></div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+          }
+        },
+        "custom_liquid_pXLeaW": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'offer-card' %}"
+          }
+        },
+        "custom_liquid_WdMfbY": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id='my-main-div-ZIP-ens-manual'> </div>"
+          }
+        },
+        "custom_liquid_gHaFD7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n@media screen and (max-width: 750px) {\n.flex-container.gap-2.rounded-md.p-2.flex-row {\n    width: 100%;\n}</style>\n{% render 'trust-badges' %}"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_tab_XYKbr8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specification",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VncBy7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Description",
+            "icon": "none",
+            "content": "<p>{{ product.description }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_GGr8h9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Additional Info",
+            "icon": "none",
+            "content": "<p><strong>Seller Name:<br/></strong>ART AVENUE<br/><br/><strong>Address:<br/></strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br/><br/><strong>Manufacture Address:<br/></strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br/><br/><strong>Seller Address:<br/></strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br/><br/><strong>Country of Origin:<br/></strong>India</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_DqAU7Y": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return and Exchange Policy",
+            "icon": "none",
+            "content": "<p><strong>48 Hours Returnable</strong></p><ul><li>Return & exchange window for this product is open for 48 hours post delivery.</li><li>Product to be returned in original packaging including external box with all the tags.</li><li>Products cannot be exchanged or returned once used.</li></ul><p>Read more about Return & Exchange policy here : <a href=\"https://vaaree.com/policies/refund-policy\">Refund policy</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "custom_dialog_gYVKE9",
+        "custom_popup_gi94U8",
+        "custom_liquid_xLVFPf",
+        "custom_liquid_94PrCb",
+        "variant_picker",
+        "custom_liquid_yQ7q3G",
+        "buy_buttons",
+        "custom_liquid_NqaQ9q",
+        "custom_liquid_pXLeaW",
+        "custom_liquid_WdMfbY",
+        "custom_liquid_gHaFD7",
+        "quantity_selector",
+        "description",
+        "collapsible_tab_XYKbr8",
+        "collapsible_tab_VncBy7",
+        "collapsible_tab_GGr8h9",
+        "collapsible_tab_DqAU7Y"
+      ],
+      "custom_css": [
+        ".button--full-width {display: flex; /* width: 100%; */ width: calc(145% - 150px) !important; margin-top: -85px; margin-left: 80px;}",
+        ".button--full-width {width: calc(120% - 150px) !important;}",
+        ".price__regular .price-item--regular {font-size: 2rem;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-5",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "columns",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "featured_collection_MizTKM": {
+      "type": "featured-collection",
+      "custom_css": [
+        "button.slider-button.slider-button--prev {left: 0; top: 50%; color: black; background: white; border-radius: 30px; position: absolute;}",
+        "button.slider-button.slider-button--next {right: 0; top: 50%; color: black; background: white; border-radius: 30px; position: absolute;}",
+        ".slider-counter {display: none !important;}",
+        ".collection__title .title:not(:only-child) {/* margin-bottom: 1rem; */ text-align: center; font-size: 3rem;}",
+        ".collection__description.body.rte.scroll-trigger.animate--slide-in {display: none;}"
+      ],
+      "settings": {
+        "title": "View similar products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "all-products",
+        "products_to_show": 13,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-5",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "add_to_cart_bg_color": "#d17769",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "bt_collection_slidernew_icPttP": {
+      "type": "bt-collection-slidernew",
+      "blocks": {
+        "collection_UNh9Bc": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Wallpaper",
+            "url": "shopify://collections/wallpapers",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_gcPVAz": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Trays",
+            "url": "shopify://collections/trays",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_yXdfYX": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Bags",
+            "url": "shopify://collections/all-bags-best-kilim-bags-for-sale-art-avenue",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_mECYmR": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Cushion",
+            "url": "shopify://collections/cushion-covers",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_fr89eE": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Rugs",
+            "url": "shopify://collections/rugs",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_PTkdTc": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Furniture",
+            "url": "shopify://collections/all-furniture",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_NnKNwB": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Carpet",
+            "url": "shopify://collections/carpets",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_Azfx6y": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Painting",
+            "url": "shopify://collections/paintings-wall-art",
+            "descriptionalign": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_UNh9Bc",
+        "collection_gcPVAz",
+        "collection_yXdfYX",
+        "collection_mECYmR",
+        "collection_fr89eE",
+        "collection_PTkdTc",
+        "collection_NnKNwB",
+        "collection_Azfx6y"
+      ],
+      "settings": {
+        "headtext": "Explore More Categories",
+        "clr": "#000000",
+        "textalign": "center",
+        "collection_clr": "#000000",
+        "brclr": "#000000"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "custom_css": [
+        ".collection__title .title:not(:only-child) {margin-bottom: 1rem; text-align: center;}",
+        "h2 {text-align: center; font-size: 3rem;}"
+      ],
+      "settings": {
+        "heading": "Recently Viewed Products",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_7aryaQ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_collection_MizTKM",
+    "bt_collection_slidernew_icPttP",
+    "related-products",
+    "custom_liquid_7aryaQ"
+  ]
+}

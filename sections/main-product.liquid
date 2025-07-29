@@ -716,8 +716,8 @@
                         <p id="dialogTitle-{{ block.id }}" class="custom-dialog-title">{{ block.settings.dialog_title }}</p>
                     </div>
                     <p id="dialogMessage-{{ block.id }}" class="custom-dialog-message">{{ block.settings.dialog_message }}</p>
-                    <button onclick="closeDialog('{{ block.id }}')">{{ block.settings.close_button_text }}</button>
-                </div>
+                                         <button onclick="closeDialog('{{ block.id }}')">{{ block.settings.close_button_text }}</button>
+                  </div>
               {%- when 'custom_dialog' -%}
                 <div class="custom-dialog-overlay" id="dialogOverlay-{{ block.id }}" onclick="closeDialog('{{ block.id }}')"></div>
                 <div class="custom-dialog-box" id="dialogBox-{{ block.id }}">
@@ -730,6 +730,107 @@
                     <p id="dialogMessage-{{ block.id }}" class="custom-dialog-message">{{ block.settings.dialog_message }}</p>
                     <button onclick="closeDialog('{{ block.id }}')">{{ block.settings.close_button_text }}</button>
                 </div>
+              {%- when 'offer_popup' -%}
+                <style>
+                  .custom-per-{{ block.id }} {
+                    flex: 1 1 0%;
+                    top: 10.7%;
+                    left: 5.3%;
+                    z-index: 100;
+                    font-size: {{ block.settings.font_size }}px;
+                    position: absolute;
+                    font-weight: bold;
+                  }
+                  .custom-overlay-{{ block.id }} {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 90%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                  }
+                  .custom-popup-{{ block.id }} {
+                    width: 400px;
+                    background: transparent;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    text-align: center;
+                    padding: 20px;
+                    margin: auto;
+                  }
+                  .custom-close-button-{{ block.id }} {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background: #ff5e5e;
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    font-size: 16px;
+                  }
+                  .custom-open-button-{{ block.id }} {
+                    padding: 5px 15px;
+                    background-color: {{ block.settings.button_background }};
+                    color: {{ block.settings.button_text_color }};
+                    border: none;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    width: {{ block.settings.button_width }}%;
+                    font-size: {{ block.settings.font_size }}px;
+                    font-weight: bold;
+                  }
+                  .custom-open-button-{{ block.id }}:hover {
+                    background-color: {{ block.settings.button_background }};
+                  }
+                  @media screen and (max-width: 750px) {
+                    .custom-open-button-{{ block.id }} {
+                      width: 100%;
+                    }
+                  }
+                </style>
+
+                <button class="custom-open-button-{{ block.id }}" onclick="openCustomPopup('{{ block.id }}')">
+                  <div style="display:flex; align-items:center; gap:15px;">
+                    <span>
+                      {% if block.settings.show_badge_spin %}
+                        {% render 'badge-spin' %}
+                      {% endif %}
+                    </span>
+                    <span style="width:100%; text-align: left; font-weight: bold !important; padding: 10px 0;">
+                      {{ block.settings.button_text }}
+                    </span>
+                    <span style="width:30%; text-align:right;">
+                      {% if block.settings.arrow_icon %}
+                        <img src="{{ block.settings.arrow_icon | image_url: width: 14 }}" style="width:14px;" alt="Arrow">
+                      {% endif %}
+                    </span>
+                  </div>
+                </button>
+
+                <div class="custom-dialog-overlay-{{ block.id }}" id="customPopupOverlay-{{ block.id }}">
+                  <div class="custom-popup-{{ block.id }}">
+                    <button class="custom-close-button-{{ block.id }}" onclick="closeCustomPopup('{{ block.id }}')">&times;</button>
+                    {% render 'main-offer-popup' %}
+                  </div>
+                </div>
+
+                <script>
+                  function openCustomPopup(blockId) {
+                    document.getElementById('customPopupOverlay-' + blockId).style.display = 'flex';
+                  }
+
+                  function closeCustomPopup(blockId) {
+                    document.getElementById('customPopupOverlay-' + blockId).style.display = 'none';
+                  }
+                </script>
             {%- endcase -%}
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -2172,6 +2273,68 @@
           "id": "close_button_text",
           "label": "Close Button Text",
           "default": "Close"
+        }
+      ]
+    },
+    {
+      "type": "offer_popup",
+      "name": "Offer Popup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Check best offers for you"
+        },
+        {
+          "type": "image_picker",
+          "id": "badge_icon",
+          "label": "Badge Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "arrow_icon",
+          "label": "Arrow Icon",
+          "info": "Icon shown on the right side of button"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "Button Background Color",
+          "default": "#F9F0D8"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "button_width",
+          "min": 50,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Button Width",
+          "default": 70
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size",
+          "default": 18
+        },
+        {
+          "type": "checkbox",
+          "id": "show_badge_spin",
+          "label": "Show Badge Spin Animation",
+          "default": true
         }
       ]
     }
