@@ -23,6 +23,7 @@
         "custom_dialog_gYVKE9": {
           "type": "custom_dialog",
           "settings": {
+            "dialog_image": "shopify://shop_images/1_-_Copy.webp",
             "dialog_title": "Dialog Title",
             "dialog_message": "This is a custom dialog message.",
             "close_button_text": "Closexcvhbxgh"
