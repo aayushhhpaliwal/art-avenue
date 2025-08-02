@@ -308,14 +308,59 @@
           "type": "column",
           "settings": {
             "enable_video_looping": true,
+            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
             "description": "",
-            "product": "",
+            "product": "xyz",
+            "view_details_text": "View details"
+          }
+        },
+        "column_rNL84D": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
+            "description": "",
+            "product": "xyz",
+            "view_details_text": "View details"
+          }
+        },
+        "column_MkLDV7": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
+            "description": "",
+            "product": "xyz",
+            "view_details_text": "View details"
+          }
+        },
+        "column_zQejBU": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
+            "description": "",
+            "product": "xyz",
+            "view_details_text": "View details"
+          }
+        },
+        "column_6YNJJt": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
+            "description": "",
+            "product": "xyz",
             "view_details_text": "View details"
           }
         }
       },
       "block_order": [
-        "column_7EMfDy"
+        "column_7EMfDy",
+        "column_rNL84D",
+        "column_MkLDV7",
+        "column_zQejBU",
+        "column_6YNJJt"
       ],
       "name": "Video features",
       "settings": {
