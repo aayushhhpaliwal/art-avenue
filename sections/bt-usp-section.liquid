@@ -1,0 +1,376 @@
+{% if section.blocks.size > 0 %}
+  {%- capture sh_usp_icon_bar_two_css -%}
+    <style> 
+      #sh-{{ section.id }}.sh-usp-icon-2-grid{padding:{{section.settings.padding_top}}px 0 {{section.settings.padding_bottom}}px 0;background: {{ section.settings.bg_color }};} 
+      #sh-{{ section.id }} .sh-page-width {max-width: {{ section.settings.section_max_width }}px; width: 100%; padding: 0 20px; margin: 0 auto; }
+      #sh-{{ section.id }} .sh-usp-icon-2-title h2 {font-size: {{section.settings.title_font_size}}px;font-weight: 500;margin:0 0 20px;color: {{section.settings.title_color}};} 
+      #sh-{{ section.id }} .sh-usp-icon-2-title{margin: 0 auto 30px;}  
+      #sh-{{ section.id }} .sh-usp-icon-2-desc p {margin: 0;font-size: {{ section.settings.content_font_size }}px;line-height: 1.4;color: {{section.settings.content_color}};}    
+      #sh-{{ section.id }} .sh-usp-icon-2-description h3{font-size: {{section.settings.block_title_font_size}}px;font-weight: 500; margin: 0 0 10px 0;color: {{section.settings.testimonial_title_color}};}
+      #sh-{{ section.id }} .sh-usp-icon-2-description p {margin: 0;font-size: {{ section.settings.block_content_font_size }}px;line-height: 1.4;color: {{section.settings.block_color}};}  
+      #sh-{{ section.id }} .sh-usp-icon-2-image {width: 70px;height: 70px;border-radius: {{ section.settings.border_radius }}%;outline:{{section.settings.border_thickness}}px solid {{section.settings.img_border_color}};background: {{section.settings.img_bg_color}};} 
+      #sh-{{ section.id }} .sh-usp-icon-2-image img {object-fit: contain;width: 100%;height: 100%;padding: 5px;} 
+      #sh-{{ section.id }} .sh-usp-icon-2-content {display: flex;justify-content: space-between;align-items: center; flex-wrap: wrap;column-gap: 30px; row-gap: 40px;} 
+      #sh-{{ section.id }} .sh-grid-2-col .sh-usp-icon-2-item {width: calc(50% - 20px);} 
+      #sh-{{ section.id }} .sh-grid-3-col .sh-usp-icon-2-item {width: calc(33.33% - 20px);}    
+      #sh-{{ section.id }} .sh-main-icon-2-content {display: flex;justify-content: space-between;gap: 20px;align-items: center;}
+      #sh-{{ section.id }} .sh-usp-icon-2-text-content {width: calc(100% - 90px);}    
+      #sh-{{ section.id }} .sh-usp-icon-2-text-content a {text-decoration: underline;}
+
+      @media only screen and (max-width: 991px){
+        #sh-{{ section.id }} .sh-grid-3-col .sh-usp-icon-2-item {width: calc(50% - 20px);}      
+      }
+      
+      @media only screen and (max-width: 767px){
+        #sh-{{ section.id }}.sh-usp-icon-2-grid{padding:{{section.settings.mob_padding_top}}px 0 {{section.settings.mob_padding_bottom}}px 0;}  
+        #sh-{{ section.id }} .sh-usp-icon-2-content .sh-usp-icon-2-item{width:100%;} 
+        #sh-{{ section.id }} .sh-usp-icon-2-title h2 {margin: 0 0 10px;font-size: 26px;} 
+        #sh-{{ section.id }} .sh-usp-icon-2-title p {font-size: 14px;}  
+        #sh-{{ section.id }} .sh-usp-icon-2-image {width: 60px;height: 60px;} 
+        #sh-{{ section.id }} .sh-usp-icon-2-content {column-gap: 20px;row-gap: 25px;} 
+        #sh-{{ section.id }} .sh-usp-icon-2-description p {font-size: 14px;}  
+        #sh-{{ section.id }} .sh-usp-icon-2-description h3 { font-size: 18px; margin: 0 0 10px 0;}   
+        #sh-{{ section.id }} .sh-usp-icon-2-text-content {width: calc(100% - 80px);}  
+        #sh-{{ section.id }} .sh-main-icon-2-content{gap:20px;}
+      }
+    </style>
+  {%- endcapture -%}
+  {{- sh_usp_icon_bar_two_css | strip_newlines -}}
+  
+  <div id="sh-{{ section.id }}" class="sh-usp-icon-2-grid">
+    <div class="sh-page-width">
+      {% if section.settings.title != blank or section.settings.content != blank %}
+        <div class="sh-usp-icon-2-title">
+          <div class="sh-title-align-{{ section.settings.text_align }}">
+            {% if section.settings.title != blank %}<h2>{{ section.settings.title }}</h2>{% endif %}
+            {% if section.settings.content != blank %}<div class="sh-usp-icon-2-desc sh-section-desc">{{ section.settings.content }}</div>{% endif %}
+          </div>
+        </div>
+      {% endif %}
+        <div class="sh-usp-icon-2-content sh-grid-{{ section.settings.per_row_icon }}-col">
+          {% for block in section.blocks %} 
+            <div class="sh-usp-icon-2-item">
+              <div class="sh-main-icon-2-content"> 
+                <div class="sh-usp-icon-2-image">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" height="" width="" loading="lazy">
+                  {% else %}
+                    <img src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Crect x='2' y='2' width='496' height='496' fill='%23D8D8D8' stroke='%23D8D8D8' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E" width="" height="" loading="lazy" alt="Testimonial">
+                  {% endif %}
+                </div>
+                {% if block.settings.title != blank or block.settings.content != blank %}
+                  <div class="sh-usp-icon-2-text-content">
+                    <div class="sh-usp-icon-2-description sh-title-align-{{ section.settings.content_align }}">  
+                      {% if block.settings.title != blank %}<h3>{{ block.settings.title }}</h3>{% endif %}
+                      {{ block.settings.content }} 
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div> 
+{% endif %}
+
+{% schema %}
+  {
+    "name": "SH: USP icon bar 2",
+    "tag": "section",
+    "class": "sh-section-hub-main",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Our Features"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>This is sample content for the description. Use it to describe your features.</p>"
+      },
+      {
+        "type":"text_alignment",
+        "id":"text_align",
+        "label": "Text alignment",
+        "default": "center"
+      },
+      {
+        "type": "header",
+        "content": "Icon"
+      },
+      {
+        "type":"select",
+        "id":"per_row_icon",
+        "label":"Number of icons per row (Desktop)",
+        "options":[
+          {
+            "label":"2",
+            "value":"2"
+          },
+          {
+            "label":"3",
+            "value":"3"
+          }
+        ], 
+        "default": "3"
+      },
+      {
+        "type":"range",
+        "id":"border_radius",
+        "label": "Border radius",
+        "min": 0,
+        "max": 50,
+        "default": 50,
+        "step": 1,
+        "unit": "%",
+      },
+      {
+        "type":"range",
+        "id":"border_thickness",
+        "label": "Border thickness",
+        "min": 0,
+        "max": 5,
+        "default": 2,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type":"text_alignment",
+        "id":"content_align",
+        "label": "Content alignment",
+        "default": "left"
+      },
+      {
+        "type": "header",
+        "content": "Font size"
+      },
+      {
+        "type": "range",
+        "id": "title_font_size",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Heading",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "content_font_size",
+        "min": 5,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Content",
+        "default": 16
+      },
+      {
+        "type": "paragraph",
+        "content": "Icon"
+      },
+      {
+        "type": "range",
+        "id": "block_title_font_size",
+        "min": 5,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Heading",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "block_content_font_size",
+        "min": 5,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Content",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#ffffff"  
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Heading color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "content_color",
+        "label": "Content color",
+        "default": "#121212"
+      },
+      {
+        "type": "paragraph",
+        "content": "Icon"
+      },
+      {
+        "type": "color",
+        "id": "testimonial_title_color",
+        "label": "Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "block_color",
+        "label": "Content color",
+        "default": "#121212"
+      },
+      {
+        "type": "color",
+        "id": "img_bg_color",
+        "label": "Background color",
+        "default": "#f3f3f3"
+      },
+      {
+        "type": "color",
+        "id": "img_border_color",
+        "label": "Border color",
+        "default": "#f3f3f3" 
+      },
+      {
+        "type":"header",
+        "content": "Section padding"
+      },
+      {
+        "type": "paragraph",
+        "content": "Desktop"
+      },
+      {
+        "type":"range",
+        "id":"padding_top",
+        "label": "Padding top",
+        "min":0,
+        "max": 100,
+        "default": 40,
+        "unit": "px"
+      },
+      {
+        "type":"range",
+        "id":"padding_bottom",
+        "label": "Padding bottom",
+        "min":0,
+        "max": 100,
+        "default": 40,
+        "unit": "px"
+      },
+      {
+        "type": "paragraph",
+        "content": "Mobile"
+      },
+      {
+        "type":"range",
+        "id":"mob_padding_top",
+        "label": "Padding top",
+        "min":0,
+        "max": 100,
+        "default": 30,
+        "unit": "px"
+      },
+      {
+        "type":"range",
+        "id":"mob_padding_bottom",
+        "label": "Padding bottom",
+        "min":0,
+        "max": 100,
+        "default": 30,
+        "unit": "px"
+      },
+      {
+        "type":"header",
+        "content": "Section width"
+      },
+      {
+        "type":"text",
+        "id":"section_max_width",
+        "label": "Width (in px)",
+        "default": "1140"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "USP icon",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>This is sample content for the description. Use it to describe your features.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "SH: USP icon bar 2", 
+        "blocks": [
+          {
+            "type": "image",
+            "settings": {
+              "title": "Heading"
+            }
+          },
+          {
+            "type": "image",
+            "settings": {
+              "title": "Heading"
+            }
+          },
+          {
+            "type": "image",
+            "settings": {
+              "title": "Heading"
+            }
+          },
+          {
+            "type": "image",
+            "settings": { 
+              "title": "Heading"
+            }
+          },
+          {
+            "type": "image",
+            "settings": { 
+              "title": "Heading"
+            }
+          },
+          {
+            "type": "image",
+            "settings": { 
+              "title": "Heading"
+            }
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["footer","header"]
+    }
+  }
+{% endschema %}
