@@ -27,32 +27,64 @@
 }
 {% endschema %}
 
-<div class="responsive-banner">
-  <div class="desktop-image">
-    {{ settings.desktop_image | image_url: '2048x' | img_tag: 'Desktop Banner', width: 2048, height: 1024 }}
-  </div>
-  <div class="mobile-image">
-    {{ settings.mobile_image | image_url: '1024x' | img_tag: 'Mobile Banner', width: 1024, height: 512 }}
-  </div>
-  <div class="banner-text">{{ settings.banner_text }}</div>
+<div class="responsive-banner page-width">
+  {% if section.settings.desktop_image %}
+    <img 
+      src="{{ section.settings.desktop_image | image_url: width: 2048 }}" 
+      class="banner-image desktop"
+      alt="Desktop Banner"
+    />
+  {% endif %}
+
+  {% if section.settings.mobile_image %}
+    <img 
+      src="{{ section.settings.mobile_image | image_url: width: 1024 }}" 
+      class="banner-image mobile"
+      alt="Mobile Banner"
+    />
+  {% endif %}
+
+  {% if section.settings.banner_text != blank %}
+    <div class="banner-text">{{ section.settings.banner_text }}</div>
+  {% endif %}
 </div>
 
 <style>
   .responsive-banner {
     position: relative;
     width: 100%;
-    height: auto; /* Adaptive height */
+    overflow: hidden;
+    text-align: center;
   }
-  .responsive-banner img {
+
+  .banner-image {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
+    display: block;
   }
+
+  .banner-image.mobile {
+    display: none;
+  }
+
   @media (max-width: 768px) {
-    .responsive-banner img.desktop {
-      display: none; /* Hide desktop image on mobile */
+    .banner-image.desktop {
+      display: none;
     }
-    .responsive-banner img.mobile {
-      display: block; /* Show mobile image */
+
+    .banner-image.mobile {
+      display: block;
     }
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
   }
 </style>
