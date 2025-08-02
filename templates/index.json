@@ -158,6 +158,82 @@
         "gap": 24
       }
     },
+    "six_banner_TzjBtT": {
+      "type": "six-banner",
+      "blocks": {
+        "banner_xMWDw7": {
+          "type": "banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/image1x1.webp",
+            "banner_link": "",
+            "banner_title": "",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_pDbHt4": {
+          "type": "banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/image2x1.webp",
+            "banner_link": "",
+            "banner_title": "",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_x8XMgG": {
+          "type": "banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/image3x1.webp",
+            "banner_link": "",
+            "banner_title": "",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_AtYeWy": {
+          "type": "banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/image1x2.webp",
+            "banner_link": "",
+            "banner_title": "",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_pRBcfY": {
+          "type": "banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/image2x2.webp",
+            "banner_link": "",
+            "banner_title": "",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_YpD3UN": {
+          "type": "banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/image3x2.webp",
+            "banner_link": "",
+            "banner_title": "",
+            "title_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "banner_xMWDw7",
+        "banner_pDbHt4",
+        "banner_x8XMgG",
+        "banner_AtYeWy",
+        "banner_pRBcfY",
+        "banner_YpD3UN"
+      ],
+      "name": "Six Banner Grid",
+      "settings": {
+        "background_position": "center center",
+        "mobile_row1_height": 100,
+        "mobile_row2_height": 200,
+        "mobile_row3_height": 100,
+        "mobile_row4_height": 130,
+        "mobile_row5_height": 230
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -314,76 +390,6 @@
         "enable_carousel": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "six_banner_TzjBtT": {
-      "type": "six-banner",
-      "blocks": {
-        "banner_xMWDw7": {
-          "type": "banner",
-          "settings": {
-            "banner_link": "",
-            "banner_title": "Banner Title",
-            "title_color": "#ffffff"
-          }
-        },
-        "banner_pDbHt4": {
-          "type": "banner",
-          "settings": {
-            "banner_link": "",
-            "banner_title": "Banner Title",
-            "title_color": "#ffffff"
-          }
-        },
-        "banner_x8XMgG": {
-          "type": "banner",
-          "settings": {
-            "banner_link": "",
-            "banner_title": "Banner Title",
-            "title_color": "#ffffff"
-          }
-        },
-        "banner_AtYeWy": {
-          "type": "banner",
-          "settings": {
-            "banner_link": "",
-            "banner_title": "Banner Title",
-            "title_color": "#ffffff"
-          }
-        },
-        "banner_pRBcfY": {
-          "type": "banner",
-          "settings": {
-            "banner_link": "",
-            "banner_title": "Banner Title",
-            "title_color": "#ffffff"
-          }
-        },
-        "banner_YpD3UN": {
-          "type": "banner",
-          "settings": {
-            "banner_link": "",
-            "banner_title": "Banner Title",
-            "title_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "banner_xMWDw7",
-        "banner_pDbHt4",
-        "banner_x8XMgG",
-        "banner_AtYeWy",
-        "banner_pRBcfY",
-        "banner_YpD3UN"
-      ],
-      "name": "Six Banner Grid",
-      "settings": {
-        "background_position": "center center",
-        "mobile_row1_height": 100,
-        "mobile_row2_height": 200,
-        "mobile_row3_height": 100,
-        "mobile_row4_height": 130,
-        "mobile_row5_height": 230
       }
     }
   },
