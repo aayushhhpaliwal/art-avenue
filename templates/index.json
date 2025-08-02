@@ -98,62 +98,14 @@
         "brclr": "#000000"
       }
     },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "<strong>Talk about your brand</strong>",
+            "heading_size": "h2"
           }
         },
         "text": {
@@ -174,6 +126,36 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "two_image_banner_tqbwDR": {
+      "type": "two-image-banner",
+      "blocks": {
+        "image_K4LyGw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1.jpg",
+            "link": "",
+            "width": "50"
+          }
+        },
+        "image_UA7kAt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "link": "",
+            "width": "50"
+          }
+        }
+      },
+      "block_order": [
+        "image_K4LyGw",
+        "image_UA7kAt"
+      ],
+      "name": "Two Images Banner",
+      "settings": {
+        "container_width": "container",
+        "gap": 24
       }
     },
     "multicolumn": {
@@ -229,49 +211,9 @@
         "padding_bottom": 36
       }
     },
-    "two_image_banner_tqbwDR": {
-      "type": "two-image-banner",
-      "blocks": {
-        "image_K4LyGw": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "width": "50"
-          }
-        },
-        "image_UA7kAt": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "width": "50"
-          }
-        }
-      },
-      "block_order": [
-        "image_K4LyGw",
-        "image_UA7kAt"
-      ],
-      "name": "Two Images Banner",
-      "settings": {
-        "container_width": "container",
-        "gap": 24
-      }
-    },
-    "bt_video_features_4BPxKc": {
-      "type": "BT-video-features",
-      "name": "Video features",
-      "settings": {
-        "scheme": "",
-        "columns_desktop": 4,
-        "columns_mobile": "1",
-        "enable_carousel": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "bt_new_feature_collection_nmFBNe": {
-      "type": "BT-New-Feature-collection",
-      "name": "new-Featured Collection",
+    "ap_featured_collection_TXUbGz": {
+      "type": "ap-featured-collection",
+      "name": "ap-count-collection",
       "settings": {
         "sec12": "",
         "paragraph": "<p>Add your collection description here</p>",
@@ -293,12 +235,13 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "standard",
+        "quick_add": "none",
+        "add_to_cart_bg_color": "#d17769",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36,
-        "add_to_cart_bg_color": "#d17769"
+        "countdown_end_time": "2024-12-31 23:59:59"
       }
     },
     "bt_video_features_LUFhr3": {
@@ -362,10 +305,7 @@
         "column_zQejBU",
         "column_6YNJJt"
       ],
-      "custom_css": [
-        ".price .price-item {font-size: 1.5rem !important;}",
-        ".price--on-sale .price-item--regular {display: none !important;}"
-      ],
+      "custom_css": [],
       "name": "Video features",
       "settings": {
         "scheme": "",
@@ -375,17 +315,86 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "six_banner_TzjBtT": {
+      "type": "six-banner",
+      "blocks": {
+        "banner_xMWDw7": {
+          "type": "banner",
+          "settings": {
+            "banner_link": "",
+            "banner_title": "Banner Title",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_pDbHt4": {
+          "type": "banner",
+          "settings": {
+            "banner_link": "",
+            "banner_title": "Banner Title",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_x8XMgG": {
+          "type": "banner",
+          "settings": {
+            "banner_link": "",
+            "banner_title": "Banner Title",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_AtYeWy": {
+          "type": "banner",
+          "settings": {
+            "banner_link": "",
+            "banner_title": "Banner Title",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_pRBcfY": {
+          "type": "banner",
+          "settings": {
+            "banner_link": "",
+            "banner_title": "Banner Title",
+            "title_color": "#ffffff"
+          }
+        },
+        "banner_YpD3UN": {
+          "type": "banner",
+          "settings": {
+            "banner_link": "",
+            "banner_title": "Banner Title",
+            "title_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "banner_xMWDw7",
+        "banner_pDbHt4",
+        "banner_x8XMgG",
+        "banner_AtYeWy",
+        "banner_pRBcfY",
+        "banner_YpD3UN"
+      ],
+      "name": "Six Banner Grid",
+      "settings": {
+        "background_position": "center center",
+        "mobile_row1_height": 100,
+        "mobile_row2_height": 200,
+        "mobile_row3_height": 100,
+        "mobile_row4_height": 130,
+        "mobile_row5_height": 230
+      }
     }
   },
   "order": [
     "bt_owl_slider_NHPMrW",
     "bt_collection_slidernew_6DcaYK",
-    "image_banner",
     "rich_text",
-    "multicolumn",
     "two_image_banner_tqbwDR",
-    "bt_video_features_4BPxKc",
-    "bt_new_feature_collection_nmFBNe",
+    "six_banner_TzjBtT",
+    "multicolumn",
+    "ap_featured_collection_TXUbGz",
     "bt_video_features_LUFhr3"
   ]
 }
