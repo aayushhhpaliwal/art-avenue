@@ -399,6 +399,93 @@
         "desktop_image": "shopify://shop_images/usp-desktop.webp",
         "banner_text": ""
       }
+    },
+    "bt_usp_section_iHjRQj": {
+      "type": "bt-usp-section",
+      "blocks": {
+        "image_AAypq8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1.png",
+            "title": "Pure Fabric Selection",
+            "content": "<p>Made from 100% pure Linen, Organza, Mull Cotton, and Khadi materials.</p>"
+          }
+        },
+        "image_WEWemj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5.png",
+            "title": "Handcrafted Detailing",
+            "content": "<p>Each saree is adorned with fine hand embroidery or hand-painted artistry.</p>"
+          }
+        },
+        "image_zqTfd7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3.png",
+            "title": "Timeless Meets Trendy",
+            "content": "<p>Classic weaves blended with contemporary styles for timeless elegance.</p>"
+          }
+        },
+        "image_RBQkmr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2.png",
+            "title": "Loom to Closet",
+            "content": "<p>Direct from artisanal clusters no middlemen, just pure craftsmanship.</p>"
+          }
+        },
+        "image_wYy7t3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4.png",
+            "title": "Featherlight Feel",
+            "content": "<p>Designed for comfort, perfect for hot, humid, and all-season wear.</p>"
+          }
+        },
+        "image_MXhAfX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.png",
+            "title": "Limited Edition Pieces",
+            "content": "<p>Exclusive, small-batch sarees, made to stand out in any gathering.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_AAypq8",
+        "image_WEWemj",
+        "image_zqTfd7",
+        "image_RBQkmr",
+        "image_wYy7t3",
+        "image_MXhAfX"
+      ],
+      "name": "SH: USP icon bar 2",
+      "settings": {
+        "title": "Why Our Products Stand out ?",
+        "content": "<p>This is sample content for the description. Use it to describe your features.</p>",
+        "text_align": "center",
+        "per_row_icon": "3",
+        "border_radius": 50,
+        "border_thickness": 2,
+        "content_align": "center",
+        "title_font_size": 30,
+        "content_font_size": 16,
+        "block_title_font_size": 22,
+        "block_content_font_size": 16,
+        "bg_color": "#ffffff",
+        "title_color": "#000",
+        "content_color": "#121212",
+        "testimonial_title_color": "#000000",
+        "block_color": "#121212",
+        "img_bg_color": "#f3f3f3",
+        "img_border_color": "#f3f3f3",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "mob_padding_top": 30,
+        "mob_padding_bottom": 30,
+        "section_max_width": "1140"
+      }
     }
   },
   "order": [
@@ -410,6 +497,7 @@
     "ap_featured_collection_TXUbGz",
     "bt_video_features_LUFhr3",
     "multicolumn",
-    "responsive_banner_zGA9cE"
+    "responsive_banner_zGA9cE",
+    "bt_usp_section_iHjRQj"
   ]
 }
