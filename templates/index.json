@@ -362,6 +362,10 @@
         "column_zQejBU",
         "column_6YNJJt"
       ],
+      "custom_css": [
+        ".price .price-item {font-size: 1.5rem !important;}",
+        ".price--on-sale .price-item--regular {display: none !important;}"
+      ],
       "name": "Video features",
       "settings": {
         "scheme": "",
