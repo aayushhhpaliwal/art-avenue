@@ -276,7 +276,7 @@
           "settings": {
             "enable_video_looping": true,
             "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
-            "description": "",
+            "description": "Hello this is aayush",
             "product": "xyz",
             "view_details_text": "View details"
           }
