@@ -158,6 +158,7 @@
     },
     "featured_collection_MizTKM": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         "button.slider-button.slider-button--prev {left: 0; top: 50%; color: black; background: white; border-radius: 30px; position: absolute;}",
         "button.slider-button.slider-button--next {right: 0; top: 50%; color: black; background: white; border-radius: 30px; position: absolute;}",
@@ -171,7 +172,7 @@
         "description": "",
         "show_description": true,
         "description_style": "body",
-        "collection": "all-products",
+        "collection": "frontpage",
         "products_to_show": 13,
         "columns_desktop": 4,
         "full_width": false,
@@ -184,7 +185,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "add_to_cart_bg_color": "#d17769",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
