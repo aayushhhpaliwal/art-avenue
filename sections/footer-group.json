@@ -16,6 +16,7 @@
       "blocks": {
         "link_list_Jxymzj": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Cushions",
             "menu": ""
@@ -23,6 +24,7 @@
         },
         "link_list_axCVV9": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Rugs",
             "menu": ""
@@ -30,6 +32,7 @@
         },
         "link_list_bbBmbe": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Furniture",
             "menu": ""
@@ -37,6 +40,7 @@
         },
         "link_list_q73Rrj": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Bedding",
             "menu": ""
