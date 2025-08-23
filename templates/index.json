@@ -164,36 +164,6 @@
         "gap": 24
       }
     },
-    "featured_collection_JGnb3F": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "title": "All Rugs",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "frontpage",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "add_to_cart_bg_color": "#d17769",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "six_banner_TzjBtT": {
       "type": "six-banner",
       "blocks": {
@@ -270,6 +240,36 @@
         "mobile_row5_height": 230
       }
     },
+    "featured_collection_JGnb3F": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "All Rugs",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all-rugs",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "add_to_cart_bg_color": "#d17769",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "bt_video_features_LUFhr3": {
       "type": "BT-video-features",
       "blocks": {
@@ -340,6 +340,66 @@
         "enable_carousel": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "bt_video_features_nUfCDf": {
+      "type": "BT-video-features",
+      "blocks": {
+        "column_BwTgic": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/43ebdc25d3b24e1f92024412bab87007.HD-1080p-2.5Mbps-40157418.mp4",
+            "description": "Hello this is aayush",
+            "product": "gateway-block-printed-floor-runner",
+            "view_details_text": "View details"
+          }
+        },
+        "column_x9zhgL": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/43ebdc25d3b24e1f92024412bab87007.HD-1080p-2.5Mbps-40157418.mp4",
+            "description": "",
+            "product": "bangui-block-printed-floor-runner",
+            "view_details_text": "View details"
+          }
+        },
+        "column_dJE44A": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/650029f4d9644ad2ab00ded7ce5d5249.HD-1080p-2.5Mbps-40157419.mp4",
+            "description": "",
+            "product": "gateway-block-printed-floor-runner",
+            "view_details_text": "View details"
+          }
+        },
+        "column_cytEbt": {
+          "type": "column",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/92bb877ce5444649b7c7e1393364005d.HD-1080p-2.5Mbps-40157844.mp4",
+            "description": "",
+            "product": "freetown-block-printed-floor-runner",
+            "view_details_text": "View details"
+          }
+        }
+      },
+      "block_order": [
+        "column_BwTgic",
+        "column_x9zhgL",
+        "column_dJE44A",
+        "column_cytEbt"
+      ],
+      "name": "Video features",
+      "settings": {
+        "scheme": "",
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "enable_carousel": true,
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "multicolumn": {
@@ -496,9 +556,10 @@
     "bt_collection_slidernew_6DcaYK",
     "rich_text",
     "two_image_banner_tqbwDR",
-    "featured_collection_JGnb3F",
     "six_banner_TzjBtT",
+    "featured_collection_JGnb3F",
     "bt_video_features_LUFhr3",
+    "bt_video_features_nUfCDf",
     "multicolumn",
     "responsive_banner_zGA9cE",
     "bt_usp_section_iHjRQj"
