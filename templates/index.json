@@ -557,16 +557,54 @@
       "settings": {
         "heading": "Blog posts",
         "heading_size": "h1",
-        "blog": "",
+        "blog": "art-avenue-handcrafted-goods-for-home-lifestyle",
         "post_limit": 3,
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "show_image": true,
         "show_date": true,
         "show_author": false,
         "show_view_all": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "slideshow_PY8V9J": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_a3gyBE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/usp-desktop_69d45e93-9b5b-40c4-bb10-1931de537abe.webp",
+            "mobile_image": "shopify://shop_images/usp-mobile.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_a3gyBE"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": ""
       }
     }
   },
@@ -582,6 +620,7 @@
     "multicolumn",
     "responsive_banner_zGA9cE",
     "bt_usp_section_iHjRQj",
-    "featured_blog_hKbcNc"
+    "featured_blog_hKbcNc",
+    "slideshow_PY8V9J"
   ]
 }
