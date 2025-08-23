@@ -3699,3 +3699,10 @@ button.slider-button.slider-button--next {
 .collection__description.body.rte.scroll-trigger.animate--slide-in {
   display: none;
 }
+
+.card__heading a{
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+  display:-webkit-box;
+  overflow:hidden;
+}
