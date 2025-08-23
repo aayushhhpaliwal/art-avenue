@@ -35,39 +35,44 @@
         "collection_xam3b8": {
           "type": "collection",
           "settings": {
-            "collhed": "",
-            "url": "",
+            "collhed": "Wallpaper",
+            "imgpic": "shopify://shop_images/20240706_122124_medium_d2f9dee4-4df2-40a5-beeb-f1a0794d57bd.jpg",
+            "url": "#",
             "descriptionalign": "center"
           }
         },
         "collection_PXX4ta": {
           "type": "collection",
           "settings": {
-            "collhed": "",
-            "url": "",
+            "collhed": "Trays",
+            "imgpic": "shopify://shop_images/81mMHTLJPSL._AC_UF894_1000_QL80_medium_60bd9619-f3ee-424f-801b-7d73eb709b20.jpg",
+            "url": "#",
             "descriptionalign": "center"
           }
         },
         "collection_Bwxcej": {
           "type": "collection",
           "settings": {
-            "collhed": "",
-            "url": "",
+            "collhed": "Bags",
+            "imgpic": "shopify://shop_images/totebags-2048px-3945_medium_f358baa6-07e8-4894-8986-a94c56cd8cc0.jpg",
+            "url": "#",
             "descriptionalign": "center"
           }
         },
         "collection_LjpEMz": {
           "type": "collection",
           "settings": {
-            "collhed": "",
-            "url": "",
+            "collhed": "Cushion",
+            "imgpic": "shopify://shop_images/1-15_medium_aff3f038-b154-4606-882c-9dfb598cd026.jpg",
+            "url": "#",
             "descriptionalign": "center"
           }
         },
         "collection_fYJ6ar": {
           "type": "collection",
           "settings": {
-            "collhed": "",
+            "collhed": "Carpet",
+            "imgpic": "shopify://shop_images/LUXAVION0047_0000_20211216_101619-800x800_medium_f21e54c8-8c71-47db-8192-629c83af5820.jpg",
             "url": "",
             "descriptionalign": "center"
           }
@@ -75,8 +80,9 @@
         "collection_FGzEW4": {
           "type": "collection",
           "settings": {
-            "collhed": "",
-            "url": "",
+            "collhed": "Furniture",
+            "imgpic": "shopify://shop_images/full-house-interior-work-500x500_medium_2fa22602-f8d0-4b6e-a0c6-116c7cb170a6.jpg",
+            "url": "#",
             "descriptionalign": "center"
           }
         }
@@ -134,7 +140,7 @@
         "image_K4LyGw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1.jpg",
+            "image": "shopify://shop_images/3_f5860a12-8c75-44cc-b155-ab334f3f7d83.webp",
             "link": "",
             "width": "50"
           }
@@ -142,7 +148,7 @@
         "image_UA7kAt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2.jpg",
+            "image": "shopify://shop_images/4_578c4e3b-363b-4a73-803f-461d22ee7fc8.webp",
             "link": "",
             "width": "50"
           }
@@ -156,6 +162,36 @@
       "settings": {
         "container_width": "container",
         "gap": 24
+      }
+    },
+    "featured_collection_JGnb3F": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "All Rugs",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "add_to_cart_bg_color": "#d17769",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "six_banner_TzjBtT": {
@@ -232,40 +268,6 @@
         "mobile_row3_height": 100,
         "mobile_row4_height": 130,
         "mobile_row5_height": 230
-      }
-    },
-    "ap_featured_collection_TXUbGz": {
-      "type": "ap-featured-collection",
-      "name": "ap-count-collection",
-      "settings": {
-        "sec12": "",
-        "paragraph": "<p>Add your collection description here</p>",
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "add_to_cart_bg_color": "#d17769",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "deal_background": "shopify://shop_images/1.png",
-        "countdown_end_time": "2024-12-31 23:59:59"
       }
     },
     "bt_video_features_LUFhr3": {
@@ -494,8 +496,8 @@
     "bt_collection_slidernew_6DcaYK",
     "rich_text",
     "two_image_banner_tqbwDR",
+    "featured_collection_JGnb3F",
     "six_banner_TzjBtT",
-    "ap_featured_collection_TXUbGz",
     "bt_video_features_LUFhr3",
     "multicolumn",
     "responsive_banner_zGA9cE",
