@@ -3384,7 +3384,59 @@
       "type": "sticky_cart",
       "limit": 1,
       "settings": []
+    },
+{
+  "type": "custom_image",
+  "name": "Custom Image",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header", 
+      "content": "Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image",
+      "label": "Add Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom" 
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "range", 
+      "id": "image_width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Image Width",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "image_padding",
+      "min": 0,
+      "max": 50, 
+      "step": 5,
+      "unit": "px",
+      "label": "Padding",
+      "default": 20
     }
+  ]
+}
   ],
   "settings": [
     {
