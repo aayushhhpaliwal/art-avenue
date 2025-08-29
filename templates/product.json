@@ -54,8 +54,20 @@
         },
         "custom_liquid_pXLeaW": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{% render 'offer-card' %}"
+          }
+        },
+        "coupon_offers_m6PYPc": {
+          "type": "coupon_offers",
+          "settings": {
+            "offer1_title": "Festive sale:Extra 10% Off Sitewide",
+            "offer1_code": "ARTAVENUE10",
+            "offer2_title": "Festive sale:Extra 10% Off Sitewide new",
+            "offer2_code": "ARTAVENUE10",
+            "offer3_title": "Festive sale:Extra 10% Off Sitewide",
+            "offer3_code": "ARTAVENUE10"
           }
         },
         "custom_liquid_WdMfbY": {
@@ -173,6 +185,7 @@
         "custom_liquid_yQ7q3G",
         "buy_buttons",
         "custom_liquid_pXLeaW",
+        "coupon_offers_m6PYPc",
         "custom_liquid_WdMfbY",
         "custom_liquid_gHaFD7",
         "quantity_selector",
