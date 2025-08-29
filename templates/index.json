@@ -281,78 +281,6 @@
         "padding_bottom": 16
       }
     },
-    "bt_video_features_LUFhr3": {
-      "type": "BT-video-features",
-      "blocks": {
-        "column_7EMfDy": {
-          "type": "column",
-          "settings": {
-            "enable_video_looping": true,
-            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
-            "description": "Hello this is aayush",
-            "product": "xyz",
-            "view_details_text": "View details"
-          }
-        },
-        "column_rNL84D": {
-          "type": "column",
-          "settings": {
-            "enable_video_looping": true,
-            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
-            "description": "",
-            "product": "xyz",
-            "view_details_text": "View details"
-          }
-        },
-        "column_MkLDV7": {
-          "type": "column",
-          "settings": {
-            "enable_video_looping": true,
-            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
-            "description": "",
-            "product": "xyz",
-            "view_details_text": "View details"
-          }
-        },
-        "column_zQejBU": {
-          "type": "column",
-          "settings": {
-            "enable_video_looping": true,
-            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
-            "description": "",
-            "product": "xyz",
-            "view_details_text": "View details"
-          }
-        },
-        "column_6YNJJt": {
-          "type": "column",
-          "settings": {
-            "enable_video_looping": true,
-            "video": "shopify://files/videos/video_20250702_164700_edit.mp4",
-            "description": "",
-            "product": "xyz",
-            "view_details_text": "View details"
-          }
-        }
-      },
-      "block_order": [
-        "column_7EMfDy",
-        "column_rNL84D",
-        "column_MkLDV7",
-        "column_zQejBU",
-        "column_6YNJJt"
-      ],
-      "custom_css": [],
-      "name": "Video features",
-      "settings": {
-        "scheme": "",
-        "columns_desktop": 4,
-        "columns_mobile": "1",
-        "enable_carousel": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "bt_video_features_nUfCDf": {
       "type": "BT-video-features",
       "blocks": {
@@ -544,7 +472,6 @@
     "rich_text",
     "six_banner_TzjBtT",
     "featured_collection_JGnb3F",
-    "bt_video_features_LUFhr3",
     "bt_video_features_nUfCDf",
     "bt_usp_section_iHjRQj",
     "responsive_banner_zGA9cE",
