@@ -606,7 +606,12 @@
             Copy Code
           </button>
         </div>
-        <div class="coupon-wrapper">
+      </div>
+    {% endif %}
+
+    {% comment %} Repeat for offer 2 and 3 with their respective settings {% endcomment %}
+    {% if block.settings.offer2_title != blank and block.settings.offer2_code != blank %}
+     <div class="coupon-wrapper">
         <div class="coupon-title">{{ block.settings.offer1_title }}</div>
         <div class="coupon-code-container">
           <div>
@@ -620,12 +625,6 @@
             Copy Code
           </button>
         </div>
-      </div>
-    {% endif %}
-
-    {% comment %} Repeat for offer 2 and 3 with their respective settings {% endcomment %}
-    {% if block.settings.offer2_title != blank and block.settings.offer2_code != blank %}
-      {% comment %}Similar wrapper for offer 2{% endcomment %}
     {% endif %}
 
     {% if block.settings.offer3_title != blank and block.settings.offer3_code != blank %}
