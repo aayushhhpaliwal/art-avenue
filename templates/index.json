@@ -525,6 +525,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "bt_video_features_q3er6q": {
+      "type": "BT-video-features",
+      "name": "Video features",
+      "settings": {
+        "scheme": "",
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "enable_carousel": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -539,6 +551,7 @@
     "bt_usp_section_iHjRQj",
     "responsive_banner_zGA9cE",
     "responsive_banner_NBnkHF",
-    "featured_blog_hKbcNc"
+    "featured_blog_hKbcNc",
+    "bt_video_features_q3er6q"
   ]
 }
