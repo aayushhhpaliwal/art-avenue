@@ -1055,7 +1055,7 @@
                  {% when 'custom_image' %}
                   <style>
                     .custom-section-image {
-  width: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1077,11 +1077,12 @@
           "
           {{ block.shopify_attributes }}
         >
-          {{ block.settings.custom_image | image_url: width: 2000 | image_tag:
-            loading: 'lazy',
-            class: 'custom-image',
-            style: 'width: ' | append: block.settings.image_width | append: '%;'
-          }}
+          {{ block.settings.custom_image | image_url: width: 2000 | image_tag: 
+  loading: 'lazy',
+  class: 'custom-image',
+  style: 'width: ' | append: block.settings.image_width | append: '%;' 
+}}
+
         </div>
            {%- endif -%}
               {%- when 'bundle' -%}
