@@ -128,7 +128,7 @@
             "hours": "HRS",
             "minutes": "MINS",
             "seconds": "SECS",
-            "title": "<p>Welcome to our store <a href='/collection/all'>Learn more</a></p>",
+            "title": "<p>Welcome to our store <a href=\"/collection/all\">Learn more</a></p>",
             "font_size": "h6",
             "body_color": "#fbfbfb",
             "link_color": "#1a66d2",
@@ -136,6 +136,10 @@
             "count_down_number_color": "#850808",
             "count_down_label_color": "#000000"
           }
+        },
+        "sticky_cart_bLbtRN": {
+          "type": "sticky_cart",
+          "settings": {}
         }
       },
       "block_order": [
@@ -155,7 +159,8 @@
         "collapsible_tab_VncBy7",
         "collapsible_tab_GGr8h9",
         "collapsible_tab_DqAU7Y",
-        "count_down_EFeLXy"
+        "count_down_EFeLXy",
+        "sticky_cart_bLbtRN"
       ],
       "custom_css": [
         ".button--full-width {display: flex; /* width: 100%; */ width: calc(145% - 150px) !important; margin-top: -85px; margin-left: 80px;}",
