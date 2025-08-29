@@ -1053,6 +1053,20 @@
                   </div>
                 </dc-count-down>
                  {% when 'custom_image' %}
+                  <style>
+                    .custom-section-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-section-image .custom-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+                  </style>
       {%- if block.settings.custom_image -%}
         <div class="custom-section-image" 
           style="
