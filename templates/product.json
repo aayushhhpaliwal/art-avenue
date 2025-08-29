@@ -35,12 +35,6 @@
             "custom_liquid": "{% render 'offer-popup' %}"
           }
         },
-        "custom_liquid_94PrCb": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<style>\n.offfer-img{\nwidth:80%;\n}\n@media screen and (max-width: 750px) {\n.offfer-img{\nwidth:100%;\n}\n}\n</style>\n<img src=\"https://cdn.shopify.com/s/files/1/0427/4690/4736/files/httpsvaaree.comproductsrighto-storage-container.png?v=1736509075\" class=\"offfer-img\">\n<hr width=\"100%\">"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -180,7 +174,6 @@
         "price",
         "custom_image_HMfybR",
         "custom_liquid_xLVFPf",
-        "custom_liquid_94PrCb",
         "variant_picker",
         "buy_buttons",
         "custom_liquid_pXLeaW",
