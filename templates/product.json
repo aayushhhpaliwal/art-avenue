@@ -32,6 +32,11 @@
         "coupon_popup_ygKQfY": {
           "type": "coupon_popup",
           "settings": {
+            "popup_bg_color": "#ff0000",
+            "popup_title": "Special Offers",
+            "title_color": "#333333",
+            "subtitle_color": "#737373",
+            "save_color": "#0e8389",
             "coupon1_title": "Get 5% Off",
             "coupon1_subtitle": "on order above ₹1999",
             "coupon1_code": "VAAREE5",
