@@ -20,10 +20,20 @@
             "mob-img": "shopify://shop_images/1_10bb2ce5-fb25-4a11-9c43-541d325973eb.jpg",
             "mob-url": ""
           }
+        },
+        "block_3HyhKT": {
+          "type": "block",
+          "settings": {
+            "desk-img": "shopify://shop_images/1_-_Copy.webp",
+            "desk-url": "",
+            "mob-img": "shopify://shop_images/1_10bb2ce5-fb25-4a11-9c43-541d325973eb.jpg",
+            "mob-url": ""
+          }
         }
       },
       "block_order": [
-        "block_hj8dPV"
+        "block_hj8dPV",
+        "block_3HyhKT"
       ],
       "name": "OWL slider",
       "settings": {
