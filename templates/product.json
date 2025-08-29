@@ -123,18 +123,42 @@
         "count_down_EFeLXy": {
           "type": "count_down",
           "settings": {
-            "count_down": "2025-02-18T18:59-0500",
+            "count_down": "2025-03-19T18:59-0500",
             "days": "DAYS",
             "hours": "HRS",
             "minutes": "MINS",
             "seconds": "SECS",
-            "title": "<p>Welcome to our store <a href=\"/collection/all\">Learn more</a></p>",
+            "title": "<p>Welcome to our store</p>",
             "font_size": "h6",
-            "body_color": "#fbfbfb",
+            "body_color": "#121212",
             "link_color": "#1a66d2",
-            "count_down_number_bg": "#ffffff",
+            "count_down_number_bg": "#cb6958",
             "count_down_number_color": "#850808",
             "count_down_label_color": "#000000"
+          }
+        },
+        "shipping_information_yDyBcp": {
+          "type": "shipping_information",
+          "settings": {
+            "estimate_delivery": "Receive your order :",
+            "delivery_day_min": 3,
+            "delivery_day_max": 3,
+            "order_text": "Ordered",
+            "prepare_text": "Shipped",
+            "prepare_time": 1,
+            "deliveried_text": "Delivered",
+            "delivery_day": 1,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "line_color": "#000000",
+            "border_color": "#000000"
+          }
+        },
+        "popup_GazAjY": {
+          "type": "popup",
+          "settings": {
+            "text": "Pop-up link text",
+            "page": ""
           }
         },
         "sticky_cart_bLbtRN": {
@@ -160,6 +184,8 @@
         "collapsible_tab_GGr8h9",
         "collapsible_tab_DqAU7Y",
         "count_down_EFeLXy",
+        "shipping_information_yDyBcp",
+        "popup_GazAjY",
         "sticky_cart_bLbtRN"
       ],
       "custom_css": [
