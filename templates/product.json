@@ -25,7 +25,7 @@
           "settings": {
             "custom_image": "shopify://shop_images/Featured_Web2-min_4e8d8d84-8243-453b-9bec-95f0ae9484a0-transformed.webp",
             "image_position": "bottom",
-            "image_width": 100,
+            "image_width": 50,
             "image_padding": 0
           }
         },
