@@ -82,10 +82,6 @@
             "custom_liquid": "<style>\n@media screen and (max-width: 750px) {\n.flex-container.gap-2.rounded-md.p-2.flex-row {\n    width: 100%;\n}</style>\n{% render 'trust-badges' %}"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -188,7 +184,6 @@
         "coupon_offers_m6PYPc",
         "custom_liquid_WdMfbY",
         "custom_liquid_gHaFD7",
-        "quantity_selector",
         "description",
         "collapsible_tab_XYKbr8",
         "collapsible_tab_VncBy7",
