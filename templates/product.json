@@ -23,10 +23,10 @@
         "custom_image_HMfybR": {
           "type": "custom_image",
           "settings": {
-            "custom_image": "shopify://shop_images/usp-mobile_5a4c6ee0-13ae-4af2-914b-9dfc834e8d86.webp",
-            "image_position": "top",
+            "custom_image": "shopify://shop_images/Featured_Web2-min_4e8d8d84-8243-453b-9bec-95f0ae9484a0-transformed.webp",
+            "image_position": "bottom",
             "image_width": 100,
-            "image_padding": 20
+            "image_padding": 0
           }
         },
         "custom_liquid_xLVFPf": {
