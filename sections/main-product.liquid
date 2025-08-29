@@ -1052,6 +1052,24 @@
                     </div>
                   </div>
                 </dc-count-down>
+                 {% when 'custom_image' %}
+      {%- if block.settings.custom_image -%}
+        <div class="custom-section-image" 
+          style="
+            padding: {{ block.settings.image_padding }}px 0;
+            {%- if block.settings.image_position == 'bottom' -%}
+              order: 1;
+            {%- endif -%}
+          "
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.custom_image | image_url: width: 2000 | image_tag:
+            loading: 'lazy',
+            class: 'custom-image',
+            style: 'width: ' | append: block.settings.image_width | append: '%;'
+          }}
+        </div>
+           {%- endif -%}
               {%- when 'bundle' -%}
                 {%- assign checked = false -%}
 
