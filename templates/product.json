@@ -72,12 +72,10 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {}
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {}
         },
         "collapsible_tab_XYKbr8": {
