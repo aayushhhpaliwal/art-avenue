@@ -1,191 +1,198 @@
+{% comment %}
+Accepts:
+- block: {Object} Block settings from theme editor
+- product: {Object} Current product
+{% endcomment %}
+
 <style>
-    .custom-discount-popup {
-        background-color: {{ block.settings.popup_bg_color }}; 
-        border-radius: 10px; /* Rounded corners */
-        padding: 20px; /* Padding around the content */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    }
-    .custom-flex {
-        display: flex; /* Flexbox display */
-    }
-    .custom-flex-col {
-      flex-direction: column; /* Column direction for flex items */
-      text-align:left;
-      line-height: normal;
-    }
-    .custom-gap-6 {
-        gap: 1.5rem; /* Gap between flex items */
-    }
-    .custom-gap-3 {
-        gap: 0.75rem; /* Smaller gap between flex items */
-    }
-    .custom-border-dashed {
-        border-style: dashed; /* Dashed border for coupon boxes */
-    }
-    .custom-border-2 {
-        border-width: 2px; /* Border width */
-    }
-    .custom-rounded-xl {
-        border-radius: 0.75rem; /* Rounded corners */
-    }
-    .custom-mx-4 {
-        margin-left: 1rem; /* Horizontal margin */
-        margin-right: 1rem; /* Horizontal margin */
-    }
-    .custom-body4 {
-        font-size: 1.2em; /* Larger font for discount text */
-        color: {{ block.settings.title_color }}; /* Darker text color */
-    }
-    .custom-body6 {
-        font-size: 0.9em; /* Smaller font for additional info */
-        color: {{ block.settings.subtitle_color }}; /* Gray color for less important text */
-    }
-    .custom-font-semibold {
-        font-weight: 600; /* Bold text for emphasis */
-    }
-    .custom-justify-end {
-        justify-content: flex-end; /* Align items to the end */
-    }
-    .custom-items-center {
-        align-items: center; /* Center items vertically */
-      gap:10px;
-    }
-    .copy-notification {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: black;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        width: fit-content;
-        display: none;
-        z-index: 1000;
-    }
-    .save-amount {
-        color: {{ block.settings.save_color }};
-    }
+  .custom-discount-popup {
+    background-color: {{ block.settings.popup_bg_color }}; 
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  .custom-flex {
+    display: flex; /* Flexbox display */
+  }
+  .custom-flex-col {
+    flex-direction: column; /* Column direction for flex items */
+    text-align:left;
+    line-height: normal;
+  }
+  .custom-gap-6 {
+    gap: 1.5rem; /* Gap between flex items */
+  }
+  .custom-gap-3 {
+    gap: 0.75rem; /* Smaller gap between flex items */
+  }
+  .custom-border-dashed {
+    border-style: dashed; /* Dashed border for coupon boxes */
+  }
+  .custom-border-2 {
+    border-width: 2px; /* Border width */
+  }
+  .custom-rounded-xl {
+    border-radius: 0.75rem; /* Rounded corners */
+  }
+  .custom-mx-4 {
+    margin-left: 1rem; /* Horizontal margin */
+    margin-right: 1rem; /* Horizontal margin */
+  }
+  .custom-body4 {
+    color: {{ block.settings.title_color }};
+  }
+  .custom-body6 {
+    color: {{ block.settings.subtitle_color }};
+  }
+  .save-amount {
+    color: {{ block.settings.save_color }};
+  }
+  .custom-font-semibold {
+    font-weight: 600; /* Bold text for emphasis */
+  }
+  .custom-justify-end {
+    justify-content: flex-end; /* Align items to the end */
+  }
+  .custom-items-center {
+    align-items: center; /* Center items vertically */
+    gap:10px;
+  }
+  .copy-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    display: none;
+    z-index: 1000;
+  }
 </style>
-<div class="custom-flex custom-flex-col custom-gap-6 custom-discount-popup" style="width: 100%;">
-    {% if block.settings.popup_title != blank %}
-        <h3 style="text-align: center; margin: 0 0 20px;">{{ block.settings.popup_title }}</h3>
-    {% endif %}
 
-    <!-- First Coupon -->
-    <div class="custom-flex custom-flex-col custom-gap-3" style="width: 100%;">
-        <div class="custom-flex custom-gap-2 custom-items-center" style="width: 100%;">
-            <div class="custom-flex custom-flex-col" style="gap:1px;">
-                {% if block.settings.coupon1_icon %}
-                    {{ block.settings.coupon1_icon | image_url: width: 30 | image_tag }}
-                {% endif %}
-            </div>
-            <div class="custom-flex custom-gap-1 custom-flex-col" style="flex: 1;">
-                <div class="custom-body4">
-                    <span>{{ block.settings.coupon1_title }}</span>
-                </div>
-                <div class="custom-body6">
-                    <span>{{ block.settings.coupon1_subtitle }}</span>
-                </div>
-            </div>
-            <div class="custom-flex custom-flex-col">
-                <div class="custom-flex custom-flex-col" style="flex: 1;">
-                    <p class="custom-body6">Save</p>
-                </div>
-                <div class="custom-flex custom-justify-end custom-flex-col" style="flex: 1;">
-                    <p class="custom-body2 save-amount">
-                        {% assign five_percent = product.price | times: 0.05 %}
-                        ₹{{ five_percent | money_without_currency }}
-                    </p>
-                </div>
-            </div>
+<div class="custom-flex custom-flex-col custom-gap-6 custom-discount-popup">
+  {% if block.settings.popup_title != blank %}
+    <h3>{{ block.settings.popup_title }}</h3>
+  {% endif %}
+  
+  <!-- First Coupon -->
+  <div class="custom-flex custom-flex-col custom-gap-3">
+    <div class="custom-flex custom-gap-2 custom-items-center" style="width: 100%;">
+      <div class="custom-flex custom-flex-col" style="gap:1px;">
+        {% if block.settings.coupon1_icon %}
+          {{ block.settings.coupon1_icon | image_url: width: 30 | image_tag }}
+        {% endif %}
+      </div>
+      <div class="custom-flex custom-gap-1 custom-flex-col" style="flex: 1;">
+        <div class="custom-body4">
+          <span>{{ block.settings.coupon1_title }}</span>
         </div>
-        <div class="custom-flex custom-border-dashed custom-border-2 custom-rounded-xl custom-mx-4 custom-flex-row">
-            <div class="custom-flex" style="width: 100%;">
-                <div class="custom-flex custom-gap-2 custom-px-4 custom-items-center custom-flex-row">
-                    <div class="custom-body4 custom-font-semibold">
-                        <span>Code: <span id="coupon1">{{ block.settings.coupon1_code }}</span></span>
-                    </div>
-                    <div class="custom-flex custom-flex-col">
-                        <svg id="copy1" style="cursor: pointer;" width="30" height="30" viewBox="0 0 16 16">
-                            <path fill="#212121" d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+        <div class="custom-body6">
+          <span>{{ block.settings.coupon1_subtitle }}</span>
         </div>
+      </div>
+      <div class="custom-flex custom-flex-col">
+        <div class="custom-flex custom-flex-col" style="flex: 1;">
+          <p class="custom-body6">Save</p>
+        </div>
+        <div class="custom-flex custom-justify-end custom-flex-col" style="flex: 1;">
+          <p class="custom-body2 save-amount">
+            {% assign five_percent = product.price | times: 0.05 %}
+            ₹{{ five_percent | money_without_currency }}
+          </p>
+        </div>
+      </div>
     </div>
+    <div class="custom-flex custom-border-dashed custom-border-2 custom-rounded-xl custom-mx-4 custom-flex-row">
+      <div class="custom-flex" style="width: 100%;">
+        <div class="custom-flex custom-gap-2 custom-px-4 custom-items-center custom-flex-row">
+          <div class="custom-body4 custom-font-semibold">
+            <span>Code: <span id="coupon1">{{ block.settings.coupon1_code }}</span></span>
+          </div>
+          <div class="custom-flex custom-flex-col">
+            <svg id="copy1" style="cursor: pointer;" width="30" height="30" viewBox="0 0 16 16">
+              <path fill="#212121" d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Second Coupon -->
-    <div class="custom-flex custom-flex-col custom-gap-3" style="width: 100%;">
-        <div class="custom-flex custom-gap-2 custom-items-center" style="width: 100%;  style="gap:1px;"">
-            <div class="custom-flex custom-flex-col">
-                {% if block.settings.coupon2_icon %}
-                    {{ block.settings.coupon2_icon | image_url: width: 30 | image_tag }}
-                {% endif %}
-            </div>
-            <div class="custom-flex custom-gap-1 custom-flex-col" style="flex: 1;">
-                <div class="custom-body4">
-                    <span>{{ block.settings.coupon2_title }}</span>
-                </div>
-                <div class="custom-body6">
-                    <span>{{ block.settings.coupon2_subtitle }}</span>
-                </div>
-            </div>
-            <div class="custom-flex custom-flex-col">
-                <div class="custom-flex custom-flex-col" style="flex: 1;">
-                    <p class="custom-body6">Save</p>
-                </div>
-                <div class="custom-flex custom-justify-end custom-flex-col" style="flex: 1;">
-                    <p class="custom-body2 save-amount">₹100</p>
-                </div>
-            </div>
+  <!-- Second Coupon -->
+  <div class="custom-flex custom-flex-col custom-gap-3">
+    <div class="custom-flex custom-gap-2 custom-items-center" style="width: 100%;  style="gap:1px;"">
+      <div class="custom-flex custom-flex-col">
+        {% if block.settings.coupon2_icon %}
+          {{ block.settings.coupon2_icon | image_url: width: 30 | image_tag }}
+        {% endif %}
+      </div>
+      <div class="custom-flex custom-gap-1 custom-flex-col" style="flex: 1;">
+        <div class="custom-body4">
+          <span>{{ block.settings.coupon2_title }}</span>
         </div>
-        <div class="custom-flex custom-border-dashed custom-border-2 custom-rounded-xl custom-mx-4 custom-flex-row">
-            <div class="custom-flex" style="width: 100%;">
-                <div class="custom-flex custom-gap-2 custom-px-4 custom-items-center custom-flex-row">
-                    <div class="custom-body4 custom-font-semibold">
-                        <span>Code: <span id="coupon2">{{ block.settings.coupon2_code }}</span></span>
-                    </div>
-                    <div class="custom-flex custom-flex-col">
-                        <svg id="copy2" style="cursor: pointer;" width="30" height="30" viewBox="0 0 16 16">
-                            <path fill="#212121" d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+        <div class="custom-body6">
+          <span>{{ block.settings.coupon2_subtitle }}</span>
         </div>
+      </div>
+      <div class="custom-flex custom-flex-col">
+        <div class="custom-flex custom-flex-col" style="flex: 1;">
+          <p class="custom-body6">Save</p>
+        </div>
+        <div class="custom-flex custom-justify-end custom-flex-col" style="flex: 1;">
+          <p class="custom-body2 save-amount">₹100</p>
+        </div>
+      </div>
     </div>
+    <div class="custom-flex custom-border-dashed custom-border-2 custom-rounded-xl custom-mx-4 custom-flex-row">
+      <div class="custom-flex" style="width: 100%;">
+        <div class="custom-flex custom-gap-2 custom-px-4 custom-items-center custom-flex-row">
+          <div class="custom-body4 custom-font-semibold">
+            <span>Code: <span id="coupon2">{{ block.settings.coupon2_code }}</span></span>
+          </div>
+          <div class="custom-flex custom-flex-col">
+            <svg id="copy2" style="cursor: pointer;" width="30" height="30" viewBox="0 0 16 16">
+              <path fill="#212121" d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 <div id="copyNotification" class="copy-notification">
-    Copied!
+  Copied!
 </div>
+
 <script>
-    function showCopyNotification() {
-        const notification = document.getElementById('copyNotification');
-        notification.style.display = 'block';
-        
-        // Hide the notification after 2 seconds
-        setTimeout(() => {
-            notification.style.display = 'none';
-        }, 2000);
-    }
+  function showCopyNotification() {
+    const notification = document.getElementById('copyNotification');
+    notification.style.display = 'block';
+    
+    // Hide the notification after 2 seconds
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 2000);
+  }
 
-    document.getElementById('copy1').addEventListener('click', function() {
-        const couponText = document.getElementById('coupon1').textContent;
-        navigator.clipboard.writeText(couponText).then(function() {
-            showCopyNotification();
-        }).catch(function(err) {
-            console.error('Failed to copy text: ', err);
-        });
+  document.getElementById('copy1').addEventListener('click', function() {
+    const couponText = document.getElementById('coupon1').textContent;
+    navigator.clipboard.writeText(couponText).then(function() {
+      showCopyNotification();
+    }).catch(function(err) {
+      console.error('Failed to copy text: ', err);
     });
+  });
 
-    document.getElementById('copy2').addEventListener('click', function() {
-        const couponText = document.getElementById('coupon2').textContent;
-        navigator.clipboard.writeText(couponText).then(function() {
-            showCopyNotification();
-        }).catch(function(err) {
-            console.error('Failed to copy text: ', err);
-        });
+  document.getElementById('copy2').addEventListener('click', function() {
+    const couponText = document.getElementById('coupon2').textContent;
+    navigator.clipboard.writeText(couponText).then(function() {
+      showCopyNotification();
+    }).catch(function(err) {
+      console.error('Failed to copy text: ', err);
     });
+  });
 </script>
