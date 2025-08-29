@@ -42,6 +42,7 @@
         },
         "custom_liquid_xLVFPf": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{% render 'offer-popup' %}"
           }
