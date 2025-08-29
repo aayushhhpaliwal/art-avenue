@@ -86,7 +86,8 @@
             "heading": "Specification",
             "icon": "none",
             "content": "",
-            "page": ""
+            "page": "",
+            "liquid": ""
           }
         },
         "collapsible_tab_VncBy7": {
@@ -95,7 +96,8 @@
             "heading": "Product Description",
             "icon": "none",
             "content": "<p>{{ product.description }}</p>",
-            "page": ""
+            "page": "",
+            "liquid": ""
           }
         },
         "collapsible_tab_GGr8h9": {
@@ -104,7 +106,8 @@
             "heading": "Additional Info",
             "icon": "none",
             "content": "<p><strong>Seller Name:<br/></strong>ART AVENUE<br/><br/><strong>Address:<br/></strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br/><br/><strong>Manufacture Address:<br/></strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br/><br/><strong>Seller Address:<br/></strong>Art Avenue, P.No 123-124 ,Nand Colony, Tonk Road, Sanganer, Art Avenue, 302029 Jaipur Rajasthan, India<br/><br/><strong>Country of Origin:<br/></strong>India</p>",
-            "page": ""
+            "page": "",
+            "liquid": ""
           }
         },
         "collapsible_tab_DqAU7Y": {
@@ -113,7 +116,25 @@
             "heading": "Return and Exchange Policy",
             "icon": "none",
             "content": "<p><strong>48 Hours Returnable</strong></p><ul><li>Return & exchange window for this product is open for 48 hours post delivery.</li><li>Product to be returned in original packaging including external box with all the tags.</li><li>Products cannot be exchanged or returned once used.</li></ul><p>Read more about Return & Exchange policy here : <a href=\"https://vaaree.com/policies/refund-policy\">Refund policy</a></p>",
-            "page": ""
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "count_down_EFeLXy": {
+          "type": "count_down",
+          "settings": {
+            "count_down": "2025-02-18T18:59-0500",
+            "days": "DAYS",
+            "hours": "HRS",
+            "minutes": "MINS",
+            "seconds": "SECS",
+            "title": "<p>Welcome to our store <a href='/collection/all'>Learn more</a></p>",
+            "font_size": "h6",
+            "body_color": "#fbfbfb",
+            "link_color": "#1a66d2",
+            "count_down_number_bg": "#ffffff",
+            "count_down_number_color": "#850808",
+            "count_down_label_color": "#000000"
           }
         }
       },
@@ -133,7 +154,8 @@
         "collapsible_tab_XYKbr8",
         "collapsible_tab_VncBy7",
         "collapsible_tab_GGr8h9",
-        "collapsible_tab_DqAU7Y"
+        "collapsible_tab_DqAU7Y",
+        "count_down_EFeLXy"
       ],
       "custom_css": [
         ".button--full-width {display: flex; /* width: 100%; */ width: calc(145% - 150px) !important; margin-top: -85px; margin-left: 80px;}",
