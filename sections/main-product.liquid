@@ -115,7 +115,21 @@
   <div class="custom-dialog-overlay" id="customPopupOverlay">
         <div class="custom-popup">
             <button class="custom-close-button" onclick="closeCustomPopup()">&times;</button>    
-          {%  render 'main-offer-popup' %}
+         {% render 'main-offer-popup', 
+    popup_bg_color: block.settings.popup_bg_color,
+    popup_title: block.settings.popup_title,
+    title_color: block.settings.title_color,
+    subtitle_color: block.settings.subtitle_color,
+    save_color: block.settings.save_color,
+    coupon1_icon: block.settings.coupon1_icon,
+    coupon1_title: block.settings.coupon1_title,
+    coupon1_subtitle: block.settings.coupon1_subtitle,
+    coupon1_code: block.settings.coupon1_code,
+    coupon2_icon: block.settings.coupon2_icon,
+    coupon2_title: block.settings.coupon2_title,
+    coupon2_subtitle: block.settings.coupon2_subtitle,
+    coupon2_code: block.settings.coupon2_code
+  %}
         </div>
     </div>
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
@@ -253,8 +267,6 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
-                {%- when 'coupon_popup' -%}
-
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -1079,11 +1091,12 @@
           "
           {{ block.shopify_attributes }}
         >
-          {{ block.settings.custom_image | image_url: width: 2000 | image_tag:
-            loading: 'lazy',
-            class: 'custom-image',
-            style: 'width: ' | append: block.settings.image_width | append: '%;'
-          }}
+          {{ block.settings.custom_image | image_url: width: 2000 | image_tag: 
+  loading: 'lazy',
+  class: 'custom-image',
+  style: 'width: ' | append: block.settings.image_width | append: '%;' 
+}}
+
         </div>
            {%- endif -%}
               {%- when 'bundle' -%}
@@ -1573,7 +1586,7 @@
       "name": "t:sections.main-product.blocks.buy_buttons.name",
       "limit": 1,
       "settings": [
-        {
+               {
           "type": "checkbox",
           "id": "show_dynamic_checkout",
           "default": true,
@@ -2550,7 +2563,7 @@
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
             }
           ],
-          "default": "return",
+          "default": "truck",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_2.label"
         },
         {
@@ -2943,7 +2956,7 @@
             }
           ],
           "default": "truck",
-          "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_3.label"
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.icon_4.label"
         },
         {
           "type": "image_picker",
@@ -3384,72 +3397,6 @@
       ]
     },
     {
-  "type": "coupon_popup",
-  "name": "Coupon Popup",
-  "limit": 1,
-  "settings": [
-    {
-      "type": "header",
-      "content": "Button Settings"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Check best offers for you"
-    },
-    {
-      "type": "image_picker",
-      "id": "button_icon", 
-      "label": "Button Icon"
-    },
-    {
-      "type": "header",
-      "content": "Coupon 1"
-    },
-    {
-      "type": "text",
-      "id": "coupon1_title",
-      "label": "Title",
-      "default": "Get 5% Off"
-    },
-    {
-      "type": "text", 
-      "id": "coupon1_subtitle",
-      "label": "Subtitle",
-      "default": "on order above ₹1999"
-    },
-    {
-      "type": "text",
-      "id": "coupon1_code",
-      "label": "Coupon Code",
-      "default": "VAAREE5"
-    },
-    {
-      "type": "header",
-      "content": "Coupon 2"  
-    },
-    {
-      "type": "text",
-      "id": "coupon2_title",
-      "label": "Title", 
-      "default": "Get ₹100 Off"
-    },
-    {
-      "type": "text",
-      "id": "coupon2_subtitle",
-      "label": "Subtitle",
-      "default": "on order above ₹1500" 
-    },
-    {
-      "type": "text",
-      "id": "coupon2_code", 
-      "label": "Coupon Code",
-      "default": "WELCOME100"
-    }
-  ]
-},
-    {
       "name": "Bundle",
       "type": "bundle",
       "settings": [
@@ -3485,6 +3432,102 @@
       "limit": 1,
       "settings": []
     },
+    // In the blocks array of the schema:
+{
+  "type": "coupon_popup",
+  "name": "Coupon Popup",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Popup Settings"
+    },
+    {
+      "type": "color",
+      "id": "popup_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text", 
+      "id": "popup_title",
+      "label": "Title",
+      "default": "Special Offers"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color", 
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#737373"
+    },
+    {
+      "type": "color",
+      "id": "save_color",
+      "label": "Save Amount Color",
+      "default": "#0e8389"
+    },
+    {
+      "type": "header",
+      "content": "First Coupon"
+    },
+    {
+      "type": "image_picker",
+      "id": "coupon1_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "coupon1_title",
+      "label": "Title",
+      "default": "Get 5% Off"
+    },
+    {
+      "type": "text",
+      "id": "coupon1_subtitle",
+      "label": "Subtitle", 
+      "default": "on orders above ₹1999"
+    },
+    {
+      "type": "text",
+      "id": "coupon1_code",
+      "label": "Coupon Code",
+      "default": "SAVE5"
+    },
+    {
+      "type": "header",
+      "content": "Second Coupon"
+    },
+    {
+      "type": "image_picker",
+      "id": "coupon2_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "coupon2_title",
+      "label": "Title",
+      "default": "Get ₹100 Off"
+    },
+    {
+      "type": "text",
+      "id": "coupon2_subtitle",
+      "label": "Subtitle",
+      "default": "on orders above ₹1500"
+    },
+    {
+      "type": "text",
+      "id": "coupon2_code",
+      "label": "Coupon Code",
+      "default": "WELCOME100"
+    }
+  ]
+},
 {
   "type": "custom_image",
   "name": "Custom Image",

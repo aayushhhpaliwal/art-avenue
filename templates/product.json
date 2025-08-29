@@ -29,6 +29,17 @@
             "image_padding": 0
           }
         },
+        "coupon_popup_ygKQfY": {
+          "type": "coupon_popup",
+          "settings": {
+            "coupon1_title": "Get 5% Off",
+            "coupon1_subtitle": "on order above ₹1999",
+            "coupon1_code": "VAAREE5",
+            "coupon2_title": "Get ₹100 Off",
+            "coupon2_subtitle": "on order above ₹1500",
+            "coupon2_code": "WELCOME100"
+          }
+        },
         "custom_liquid_xLVFPf": {
           "type": "custom_liquid",
           "settings": {
@@ -173,6 +184,7 @@
         "title",
         "price",
         "custom_image_HMfybR",
+        "coupon_popup_ygKQfY",
         "custom_liquid_xLVFPf",
         "variant_picker",
         "buy_buttons",
