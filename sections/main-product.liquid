@@ -1008,6 +1008,122 @@
                     ]
                   </script>
                 </dc-stock-information>
+                {%- when 'coupon_popup' -%}
+                  <style>
+  .custom-per{
+    flex: 1 1 0%;
+    /* transform: translate(-50%, -50%); */
+    top: 10.7%;
+    left: 5.3%;
+    z-index: 100;
+    font-size: 1.8rem;
+    position:absolute;
+    font-size:bold;
+    }
+        .custom-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .custom-popup {
+            width: 400px;
+            /* height: 340px; */
+            background: transparent;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .custom-close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff5e5e;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .custom-open-button {
+            padding: 5px 15px;
+            background-color: #F9F0D8;
+            color: black;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            width:70%;
+          font-size:1.5rem;
+          font-weight:bold;
+        }
+
+        .custom-open-button:hover {
+              background-color: #F9F0D8;
+        }
+  @media screen and (max-width: 750px) {
+ .custom-open-button{
+   width:100%;
+ }
+}
+    </style>
+
+    <button class="custom-open-button" onclick="openCustomPopup()">
+<div style="display:flex; align-items:center; gap:15px;">
+<span>
+
+
+
+  {% render 'badge-spin' %}
+</span>
+<span style="width:100%; text-align: left;     font-weight: bold !important;
+    padding: 10px 0;">Check best offers for you</span>
+<span style="width:30%; text-align:right;">
+  
+  <img src="https://cdn.shopify.com/s/files/1/0427/4690/4736/files/1123247-200.png?v=1733999175" style="width:14px;"></span>
+    
+  </div>
+  
+  </button>
+
+  
+
+    <script>
+        function openCustomPopup() {
+            document.getElementById('customPopupOverlay').style.display = 'flex';
+        }
+
+        function closeCustomPopup() {
+            document.getElementById('customPopupOverlay').style.display = 'none';
+        }
+    </script>
+
+    <!-- Shopify Dawn Theme Integration -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (productSection) {
+                const openButton = document.createElement('button');
+                openButton.className = 'custom-open-button';
+                openButton.textContent = 'Open Popup';
+                openButton.addEventListener('click', openCustomPopup);
+                productSection.appendChild(openButton);
+            }
+        });
+    </script>
+
               {%- when 'size_guide' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
