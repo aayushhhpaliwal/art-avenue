@@ -184,77 +184,6 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
-                {%- when 'coupon_popup' -%}
-<style>
-  .custom-per{
-    flex: 1 1 0%;
-    top: 10.7%;
-    left: 5.3%;
-    z-index: 100;
-    font-size: 1.8rem;
-    position:absolute;
-    font-size:bold;
-  }
-  .custom-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  /* ... rest of the styles ... */
-</style>
-
-<button class="custom-open-button" onclick="openCustomPopup()">
-  <div style="display:flex; align-items:center; gap:15px;">
-    <span>{% render 'badge-spin' %}</span>
-    <span style="width:100%; text-align: left; font-weight: bold !important; padding: 10px 0;">
-      {{ block.settings.button_text }}
-    </span>
-    <span style="width:30%; text-align:right;">
-      {% if block.settings.button_icon %}
-        {{ block.settings.button_icon | image_url: width: 14 | image_tag }}
-      {% endif %}
-    </span>
-  </div>
-</button>
-
-<div class="custom-flex custom-flex-col custom-gap-6 custom-discount-popup">
-  <!-- Coupon 1 -->
-  <div class="custom-flex custom-flex-col custom-gap-3">
-    <div class="custom-body4">
-      <span>{{ block.settings.coupon1_title }}</span>
-    </div>
-    <div class="custom-body6">
-      <span>{{ block.settings.coupon1_subtitle }}</span>
-    </div>
-    <div class="coupon-code" id="coupon1">
-      {{ block.settings.coupon1_code }}
-    </div>
-  </div>
-
-  <!-- Coupon 2 -->
-  <div class="custom-flex custom-flex-col custom-gap-3">
-    <div class="custom-body4">
-      <span>{{ block.settings.coupon2_title }}</span>
-    </div>
-    <div class="custom-body6">
-      <span>{{ block.settings.coupon2_subtitle }}</span>
-    </div>
-    <div class="coupon-code" id="coupon2">
-      {{ block.settings.coupon2_code }}
-    </div>
-  </div>
-</div>
-
-<script>
-  // ... existing JavaScript ... 
-</script>
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -1148,12 +1077,11 @@
           "
           {{ block.shopify_attributes }}
         >
-          {{ block.settings.custom_image | image_url: width: 2000 | image_tag: 
-  loading: 'lazy',
-  class: 'custom-image',
-  style: 'width: ' | append: block.settings.image_width | append: '%;' 
-}}
-
+          {{ block.settings.custom_image | image_url: width: 2000 | image_tag:
+            loading: 'lazy',
+            class: 'custom-image',
+            style: 'width: ' | append: block.settings.image_width | append: '%;'
+          }}
         </div>
            {%- endif -%}
               {%- when 'bundle' -%}
@@ -3453,72 +3381,6 @@
         }
       ]
     },
-    {
-  "type": "coupon_popup",
-  "name": "Coupon Popup",
-  "limit": 1,
-  "settings": [
-    {
-      "type": "header",
-      "content": "Button Settings"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Check best offers for you"
-    },
-    {
-      "type": "image_picker",
-      "id": "button_icon", 
-      "label": "Button Icon"
-    },
-    {
-      "type": "header",
-      "content": "Coupon 1"
-    },
-    {
-      "type": "text",
-      "id": "coupon1_title",
-      "label": "Title",
-      "default": "Get 5% Off"
-    },
-    {
-      "type": "text", 
-      "id": "coupon1_subtitle",
-      "label": "Subtitle",
-      "default": "on order above ₹1999"
-    },
-    {
-      "type": "text",
-      "id": "coupon1_code",
-      "label": "Coupon Code",
-      "default": "VAAREE5"
-    },
-    {
-      "type": "header",
-      "content": "Coupon 2"  
-    },
-    {
-      "type": "text",
-      "id": "coupon2_title",
-      "label": "Title", 
-      "default": "Get ₹100 Off"
-    },
-    {
-      "type": "text",
-      "id": "coupon2_subtitle",
-      "label": "Subtitle",
-      "default": "on order above ₹1500" 
-    },
-    {
-      "type": "text",
-      "id": "coupon2_code", 
-      "label": "Coupon Code",
-      "default": "WELCOME100"
-    }
-  ]
-},
     {
       "name": "Bundle",
       "type": "bundle",
