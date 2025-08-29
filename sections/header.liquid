@@ -67,7 +67,9 @@
     padding-top: 1rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
-
+sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
@@ -130,7 +132,7 @@
       endif
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1', search_label_text: section.settings.search_label_text, search_suggestions: section.settings.search_suggestions
+        render 'header-search', input_id: 'Search-In-Modal-1', search_label_text: section.settings.search_label_text
       endif
     -%}
 
@@ -203,7 +205,7 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-       <div class="desk-search"> {% render 'header-search', input_id: 'Search-In-Modal', search_label_text: section.settings.search_label_text, search_suggestions: section.settings.search_suggestions %}</div>
+       <div class="desk-search"> {% render 'header-search', input_id: 'Search-In-Modal', search_label_text: section.settings.search_label_text %}</div>
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -589,13 +591,6 @@
       "label": "Search Label Text",
       "default": "Search For",
       "info": "Text to display before the animated suggestions in the search bar"
-    },
-    {
-      "type": "text_list",
-      "id": "search_suggestions",
-      "label": "Search Suggestions",
-      "default": ["Bedsheets", "Cushion Covers", "Dining Sets"],
-      "info": "Suggestions to show in the animated search label. Add one per line."
     },
     {
       "type": "header",
