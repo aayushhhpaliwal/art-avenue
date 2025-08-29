@@ -1079,7 +1079,8 @@
         >
           {{ block.settings.custom_image | image_url: width: 2000 | image_tag:
             loading: 'lazy',
-            class: 'custom-image'
+            class: 'custom-image',
+            style: 'width: ' | append: block.settings.image_width | append: '%;'
           }}
         </div>
            {%- endif -%}
