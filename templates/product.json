@@ -20,6 +20,15 @@
           "type": "price",
           "settings": {}
         },
+        "custom_image_HMfybR": {
+          "type": "custom_image",
+          "settings": {
+            "custom_image": "shopify://shop_images/usp-mobile_5a4c6ee0-13ae-4af2-914b-9dfc834e8d86.webp",
+            "image_position": "top",
+            "image_width": 100,
+            "image_padding": 20
+          }
+        },
         "custom_liquid_xLVFPf": {
           "type": "custom_liquid",
           "settings": {
@@ -169,6 +178,7 @@
       "block_order": [
         "title",
         "price",
+        "custom_image_HMfybR",
         "custom_liquid_xLVFPf",
         "custom_liquid_94PrCb",
         "variant_picker",
