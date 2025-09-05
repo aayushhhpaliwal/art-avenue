@@ -183,7 +183,7 @@
         "type": "sticky-atc",
         "settings": {
           "enable_section": true,
-          "color_scheme": "",
+          "color_scheme": "scheme-5",
           "title_size": "h4",
           "show_img": true,
           "img_width": "60",
