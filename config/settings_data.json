@@ -197,6 +197,18 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "15191099883265461803": {
+        "type": "shopify://apps/reelfy-videos/blocks/app-embed/4022ffb0-05c3-4ef3-a409-6df51f4b1b3f",
+        "disabled": false,
+        "settings": {}
+      },
+      "5816581709647520605": {
+        "type": "shopify://apps/reelfy-videos/blocks/app-pops/4022ffb0-05c3-4ef3-a409-6df51f4b1b3f",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
