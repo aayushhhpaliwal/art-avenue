@@ -495,7 +495,8 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36,
-        "countdown_end_time": "2025-12-31 23:59:59"
+        "deal_background": "shopify://shop_images/house-plant-on-wooden-slat-wall_925x_f840f387-b2ea-442f-b41e-5cbb56b90a38.jpg",
+        "countdown_end_time": "2025-09-15 23:59:59"
       }
     }
   },
