@@ -38,14 +38,17 @@
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_1": "none",
+            "icon_1": "paw_print",
             "image_1": "shopify://shop_images/freetown-block-printed-floor-runner-yellow-933759-320689_1500x_6c1b2f6d-75fc-479a-ba73-dab1b709dbe3.jpg",
-            "heading_1": "",
+            "heading_1": "USP 1",
             "icon_2": "truck",
-            "heading_2": "Heading",
+            "image_2": "shopify://shop_images/cafe-patio_925x_5544b765-234c-4379-9460-045a4891f153.jpg",
+            "heading_2": "USP 2",
             "icon_3": "truck",
-            "heading_3": "Heading",
-            "icon_4": "truck",
+            "image_3": "shopify://shop_images/bright-hotel-room-bed_925x_ad27212d-735a-4134-a8db-45e1eea03477.jpg",
+            "heading_3": "USP 3",
+            "icon_4": "silhouette",
+            "image_4": "shopify://shop_images/dark-wall-bedside-table_925x_b1247de3-f3b1-4bd5-b0fa-b22d4d9ddc2e.jpg",
             "heading_4": "Heading"
           }
         },
