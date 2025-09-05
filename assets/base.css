@@ -3713,13 +3713,13 @@ button.slider-button.slider-button--next {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(var(--color-button)) !important;
+  border: 1px solid #CB6957;
   padding: 0 3rem;
   cursor: pointer;
   font: inherit;
   font-size: 1.5rem;
   text-decoration: none;
-  color: rgb(var(--color-button-text)) !important;
+  color:#CB6957 !important;
   transition: box-shadow var(--duration-short) ease, background-color var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
