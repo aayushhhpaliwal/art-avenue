@@ -267,7 +267,7 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -279,6 +279,35 @@
         "swipe_on_mobile": false,
         "padding_top": 16,
         "padding_bottom": 16
+      }
+    },
+    "175709702350045830": {
+      "type": "apps",
+      "blocks": {
+        "reelfy_videos_reelfy_section_8x4NH4": {
+          "type": "shopify://apps/reelfy-videos/blocks/reelfy-section/4022ffb0-05c3-4ef3-a409-6df51f4b1b3f",
+          "settings": {
+            "gallery_id": 12219,
+            "title": "",
+            "subtitle": "",
+            "heading_size": "1",
+            "heading_align": "left",
+            "heading_color": "",
+            "desc_style": "subtitle",
+            "desc_color": "",
+            "custom_class": "",
+            "background_color": "",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "padding_left_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "reelfy_videos_reelfy_section_8x4NH4"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "ap_featured_collection_PRa3Xc": {
@@ -507,6 +536,7 @@
     "rich_text",
     "six_banner_TzjBtT",
     "featured_collection_JGnb3F",
+    "175709702350045830",
     "ap_featured_collection_PRa3Xc",
     "bt_video_features_nUfCDf",
     "bt_usp_section_iHjRQj",
