@@ -95,6 +95,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+        ".button,.shopify-challenge__button,.customer button {border: 1px solid #cb6957; color: white !important; background-color: #cb6957 !important;}"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
