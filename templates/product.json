@@ -133,23 +133,6 @@
             "liquid": ""
           }
         },
-        "count_down_EFeLXy": {
-          "type": "count_down",
-          "settings": {
-            "count_down": "2025-03-19T18:59-0500",
-            "days": "DAYS",
-            "hours": "HRS",
-            "minutes": "MINS",
-            "seconds": "SECS",
-            "title": "<p>Welcome to our store</p>",
-            "font_size": "h6",
-            "body_color": "#121212",
-            "link_color": "#1a66d2",
-            "count_down_number_bg": "#cb6958",
-            "count_down_number_color": "#850808",
-            "count_down_label_color": "#000000"
-          }
-        },
         "shipping_information_yDyBcp": {
           "type": "shipping_information",
           "settings": {
@@ -191,7 +174,6 @@
         "collapsible_tab_VncBy7",
         "collapsible_tab_GGr8h9",
         "collapsible_tab_DqAU7Y",
-        "count_down_EFeLXy",
         "shipping_information_yDyBcp",
         "sticky_cart_bLbtRN"
       ],
