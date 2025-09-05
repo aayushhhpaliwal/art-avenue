@@ -20,13 +20,6 @@
           "type": "price",
           "settings": {}
         },
-        "custom_liquid_xLVFPf": {
-          "type": "custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "{% render 'offer-popup' %}"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -34,22 +27,15 @@
             "swatch_shape": "circle"
           }
         },
-        "icon_with_text_aEcyVU": {
-          "type": "icon-with-text",
+        "coupon_offers_m6PYPc": {
+          "type": "coupon_offers",
           "settings": {
-            "layout": "horizontal",
-            "icon_1": "paw_print",
-            "image_1": "shopify://shop_images/freetown-block-printed-floor-runner-yellow-933759-320689_1500x_6c1b2f6d-75fc-479a-ba73-dab1b709dbe3.jpg",
-            "heading_1": "USP 1",
-            "icon_2": "truck",
-            "image_2": "shopify://shop_images/cafe-patio_925x_5544b765-234c-4379-9460-045a4891f153.jpg",
-            "heading_2": "USP 2",
-            "icon_3": "truck",
-            "image_3": "shopify://shop_images/bright-hotel-room-bed_925x_ad27212d-735a-4134-a8db-45e1eea03477.jpg",
-            "heading_3": "USP 3",
-            "icon_4": "silhouette",
-            "image_4": "shopify://shop_images/dark-wall-bedside-table_925x_b1247de3-f3b1-4bd5-b0fa-b22d4d9ddc2e.jpg",
-            "heading_4": "Heading"
+            "offer1_title": "Festive sale:Extra 10% Off Sitewide",
+            "offer1_code": "ARTAVENUE10",
+            "offer2_title": "Festive sale:Extra 10% Off Sitewide new",
+            "offer2_code": "ARTAVENUE10",
+            "offer3_title": "Festive sale:Extra 10% Off Sitewide",
+            "offer3_code": "ARTAVENUE10"
           }
         },
         "buy_buttons": {
@@ -66,17 +52,6 @@
             "custom_liquid": "{% render 'offer-card' %}"
           }
         },
-        "coupon_offers_m6PYPc": {
-          "type": "coupon_offers",
-          "settings": {
-            "offer1_title": "Festive sale:Extra 10% Off Sitewide",
-            "offer1_code": "ARTAVENUE10",
-            "offer2_title": "Festive sale:Extra 10% Off Sitewide new",
-            "offer2_code": "ARTAVENUE10",
-            "offer3_title": "Festive sale:Extra 10% Off Sitewide",
-            "offer3_code": "ARTAVENUE10"
-          }
-        },
         "custom_liquid_WdMfbY": {
           "type": "custom_liquid",
           "settings": {
@@ -89,7 +64,7 @@
             "custom_liquid": "<style>\n@media screen and (max-width: 750px) {\n.flex-container.gap-2.rounded-md.p-2.flex-row {\n    width: 100%;\n}</style>\n{% render 'trust-badges' %}"
           }
         },
-        "description": {
+        "description_xkjcQb": {
           "type": "description",
           "settings": {}
         },
@@ -161,15 +136,13 @@
       "block_order": [
         "title",
         "price",
-        "custom_liquid_xLVFPf",
         "variant_picker",
-        "icon_with_text_aEcyVU",
+        "coupon_offers_m6PYPc",
         "buy_buttons",
         "custom_liquid_pXLeaW",
-        "coupon_offers_m6PYPc",
         "custom_liquid_WdMfbY",
         "custom_liquid_gHaFD7",
-        "description",
+        "description_xkjcQb",
         "collapsible_tab_XYKbr8",
         "collapsible_tab_VncBy7",
         "collapsible_tab_GGr8h9",
