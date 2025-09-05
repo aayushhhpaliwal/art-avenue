@@ -38,9 +38,9 @@
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_1": "heart",
+            "icon_1": "none",
             "image_1": "shopify://shop_images/freetown-block-printed-floor-runner-yellow-933759-320689_1500x_6c1b2f6d-75fc-479a-ba73-dab1b709dbe3.jpg",
-            "heading_1": "Heading",
+            "heading_1": "",
             "icon_2": "truck",
             "heading_2": "Heading",
             "icon_3": "truck",
@@ -154,21 +154,17 @@
             "delivery_day_min": 3,
             "delivery_day_max": 3,
             "order_text": "Ordered",
+            "order_icon": "shopify://shop_images/2435326.png",
             "prepare_text": "Shipped",
             "prepare_time": 1,
+            "delivery_icon": "shopify://shop_images/4847433.png",
             "deliveried_text": "Delivered",
-            "delivery_day": 1,
+            "delivery_day": 12,
+            "deliveried_icon": "shopify://shop_images/1610961.png",
             "background_color": "#ffffff",
             "text_color": "#000000",
             "line_color": "#000000",
             "border_color": "#000000"
-          }
-        },
-        "popup_GazAjY": {
-          "type": "popup",
-          "settings": {
-            "text": "Pop-up link text",
-            "page": ""
           }
         },
         "sticky_cart_bLbtRN": {
@@ -194,7 +190,6 @@
         "collapsible_tab_DqAU7Y",
         "count_down_EFeLXy",
         "shipping_information_yDyBcp",
-        "popup_GazAjY",
         "sticky_cart_bLbtRN"
       ],
       "custom_css": [],
