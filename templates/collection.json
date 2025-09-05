@@ -11,10 +11,86 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
+      }
+    },
+    "bt_collection_slidernew_XMUwGD": {
+      "type": "bt-collection-slidernew",
+      "blocks": {
+        "collection_3Y9LUi": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Wallpaper",
+            "imgpic": "shopify://shop_images/20240706_122124_medium_d2f9dee4-4df2-40a5-beeb-f1a0794d57bd.jpg",
+            "url": "shopify://collections/outdoor",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_qairKx": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Trays",
+            "imgpic": "shopify://shop_images/81mMHTLJPSL._AC_UF894_1000_QL80_medium_60bd9619-f3ee-424f-801b-7d73eb709b20.jpg",
+            "url": "shopify://collections/outdoor",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_FUGADa": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Bags",
+            "imgpic": "shopify://shop_images/totebags-2048px-3945_medium_f358baa6-07e8-4894-8986-a94c56cd8cc0.jpg",
+            "url": "shopify://collections/outdoor",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_gw93yN": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Cushion",
+            "imgpic": "shopify://shop_images/1-15_medium_aff3f038-b154-4606-882c-9dfb598cd026.jpg",
+            "url": "shopify://collections/outdoor",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_zw4T3B": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Carpet",
+            "imgpic": "shopify://shop_images/LUXAVION0047_0000_20211216_101619-800x800_medium_f21e54c8-8c71-47db-8192-629c83af5820.jpg",
+            "url": "shopify://collections/outdoor",
+            "descriptionalign": "center"
+          }
+        },
+        "collection_pyp4kr": {
+          "type": "collection",
+          "settings": {
+            "collhed": "Furniture",
+            "imgpic": "shopify://shop_images/full-house-interior-work-500x500_medium_2fa22602-f8d0-4b6e-a0c6-116c7cb170a6.jpg",
+            "url": "shopify://collections/home",
+            "descriptionalign": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_3Y9LUi",
+        "collection_qairKx",
+        "collection_FUGADa",
+        "collection_gw93yN",
+        "collection_zw4T3B",
+        "collection_pyp4kr"
+      ],
+      "name": "Collection Slider latest",
+      "settings": {
+        "headtext": "",
+        "clr": "#000000",
+        "textalign": "center",
+        "collection_clr": "#000000",
+        "brclr": "#000000"
       }
     },
     "product-grid": {
@@ -40,6 +116,7 @@
   },
   "order": [
     "banner",
+    "bt_collection_slidernew_XMUwGD",
     "product-grid"
   ]
 }
